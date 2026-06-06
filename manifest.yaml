@@ -1,0 +1,131 @@
+routes:
+  literature-reading:
+    triggers:
+      - paper
+      - pdf
+      - literature
+      - summarize
+      - published
+      - top journal
+    references:
+      - references/literature-reading.md
+    assets:
+      - assets/literature-note-template.md
+
+  research-brainstorming:
+    triggers:
+      - vague idea
+      - brainstorm
+      - research question
+      - topic
+      - mechanism
+    references:
+      - references/research-brainstorming.md
+    assets:
+      - assets/research-plan-template.md
+
+  feasibility-check:
+    triggers:
+      - feasible
+      - tractable
+      - can become a paper
+      - model idea
+      - project potential
+    references:
+      - references/feasibility-check.md
+      - references/rigor-and-consistency.md
+    assets:
+      - assets/research-plan-template.md
+
+  management-science-writing:
+    triggers:
+      - write
+      - rewrite
+      - abstract
+      - body
+      - conclusion
+      - appendix
+      - management science style
+    references:
+      - references/management-science-writing.md
+
+  introduction-writing:
+    triggers:
+      - introduction
+      - intro
+      - contributions
+      - roadmap
+    references:
+      - references/management-science-writing.md
+      - references/introduction-writing.md
+    assets:
+      - assets/introduction-template.md
+
+  theorem-and-proof:
+    triggers:
+      - theorem
+      - proposition
+      - lemma
+      - corollary
+      - proof
+      - constant
+    references:
+      - references/theorem-interpretation.md
+      - references/proof-rigor.md
+    assets:
+      - assets/theorem-interpretation-template.md
+
+  experiment-design:
+    triggers:
+      - experiment
+      - numerical
+      - simulation
+      - robustness
+      - figure
+      - table
+      - plot
+    references:
+      - references/experiment-design.md
+    assets:
+      - assets/experiment-plan-template.md
+
+  managerial-insights:
+    triggers:
+      - managerial insight
+      - implication
+      - interpretation
+      - mechanism
+      - trade-off
+    references:
+      - references/management-science-writing.md
+      - references/managerial-insights.md
+      - references/theorem-interpretation.md
+
+  reviewer-critique:
+    triggers:
+      - review
+      - critique
+      - referee
+      - reviewer
+      - weakness
+      - major concern
+    references:
+      - references/reviewer-critique.md
+      - references/rigor-and-consistency.md
+    assets:
+      - assets/reviewer-report-template.md
+
+  revision-audit:
+    triggers:
+      - revision
+      - resubmission
+      - co-author comment
+      - reviewer comment
+      - diff
+      - commit
+      - taste data
+    references:
+      - references/taste-evolution.md
+      - references/management-science-writing.md
+    assets:
+      - assets/revision-audit-template.md

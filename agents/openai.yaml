@@ -1,0 +1,4 @@
+interface:
+  display_name: "OM/OR Research Workflow"
+  short_description: "Research and writing workflow for OM/OR papers"
+  default_prompt: "Use $or-ms-research-workflow to critique my Management Science paper draft."
