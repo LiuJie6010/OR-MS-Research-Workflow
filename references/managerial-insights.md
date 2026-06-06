@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Write post-result managerial paragraphs that are useful, credible, and tied to formal or numerical evidence.
+Write post-result managerial paragraphs that are useful, credible, and tied to formal or numerical evidence. This is a subroutine of `management-science-writing.md`, not a separate paper-writing workflow.
 
 ## When to Use
 
-Use after propositions, theorems, examples, numerical findings, robustness checks, and design-lens sections.
+Use after propositions, theorems, examples, numerical findings, robustness checks, and design-lens sections. When the implication is part of body-section prose, load this together with `management-science-writing.md`; when the implication comes from a formal result, also load `theorem-interpretation.md`.
 
 ## Inputs Needed
 

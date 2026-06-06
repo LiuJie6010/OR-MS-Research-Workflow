@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Turn formal results into credible Management Science prose without weakening the math or overstating the claim.
+Turn formal results into credible Management Science body prose without weakening the math or overstating the claim. This is a subroutine of `management-science-writing.md`, not a replacement for the whole body-writing workflow.
 
 ## When to Use
 
-Use after theorem, proposition, lemma, corollary, example, or numerical result statements, especially when the user asks for interpretation, intuition, managerial meaning, or section narrative.
+Use after theorem, proposition, lemma, corollary, example, or numerical result statements, especially when the user asks for interpretation, intuition, managerial meaning, or section narrative. When the user is revising a body section, load this together with `management-science-writing.md`; when proof validity or claim status is uncertain, also load `proof-rigor.md`.
 
 ## Inputs Needed
 

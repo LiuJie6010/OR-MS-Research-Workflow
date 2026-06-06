@@ -1,0 +1,269 @@
+% =============================================================================
+% OVERALL LOGIC FLOW (post-revision)
+% P1 (Context):     Asymmetric demand is the norm in e-commerce, and opaque
+%                   selling pools inventory across variants and is already
+%                   widely deployed. Pooling value is governed by two coupled
+%                   levers that the retailer controls jointly: the opacity
+%                   design and the inventory allocation.
+% P2 (Trade-off):   The right design overlaps popular with unpopular items so
+%                   demand can flow across the assortment. The right allocation
+%                   matches stock to the demand flow the design induces. Each
+%                   lever can forfeit the pooling benefit when the other is
+%                   misaligned. Too-broad and too-narrow designs both fail.
+% P3 (Difficulty):  Asymmetric and time-varying demand, a doubly exponential
+%                   design space, and the joint optimization of design,
+%                   allocation, and real-time fulfillment under stochastic
+%                   demand. No single lever can be optimized in isolation.
+% P4 (Research Q):  EYZ2026 answers a symmetric, uniform-allocation, fixed-
+%                   design special case using a balls-into-bins analysis that
+%                   does not carry over to the realistic regime. State the
+%                   research question: what structural property of the opacity
+%                   design, taken together with the inventory allocation,
+%                   guarantees near-optimal pooling under asymmetric and time-
+%                   varying demand, and how should design and allocation be
+%                   jointly chosen in practice?
+% P5 (Answer):      Bipartite graph representation plus the Generalized
+%                   Chaining Gap (GCG) framework. Connectivity is necessary and
+%                   sufficient. A connected sparse design with the even
+%                   allocation and load balancing delivers Omega(1/sqrt(S))
+%                   savings, the order of the fully flexible benchmark. The
+%                   long chain is GCG-optimal among 2-opaque designs, the
+%                   popular-with-unpopular pairing improves the proxy term,
+%                   and a small redistribution of the same total stock can
+%                   nearly double savings. The sample-path GCG extends the
+%                   conclusion to general fixed allocations and to three
+%                   canonical forms of time-varying demand.
+% Contributions:    Four items: model, GCG theory with robustness, joint
+%                   allocation-and-design optimization, and numerical evidence.
+% P6 (Roadmap):     Section-by-section outline spanning Sections 2 through 8.
+%
+% DESIGN PRINCIPLES
+% (a) Lead with the realistic regime (Pareto-skewed demand) rather than with
+%     the symmetric baseline of prior work.
+% (b) Frame the paper as a new research question, not an extension of EYZ2026:
+%     joint optimization of design, allocation, and fulfillment under
+%     asymmetric and time-varying demand through the GCG lens.
+% (c) Keep two levers visible throughout: opacity design and inventory
+%     allocation. Both are first-order, and each can be the binding lever.
+% (d) Translate every structural claim into a managerial reading before the
+%     next technical claim. Preserve the precision the theorems actually prove
+%     (same order, not same savings).
+% (e) Local style rules: no em dashes, no semicolons, no emphasis font.
+% =============================================================================
+
+\section{Introduction}
+\label{sec:intro}
+
+% --- PARAGRAPH 1: CONTEXT ---
+% Role: Hook the reader with the real-world setting and introduce both levers.
+% Internal Logic: e-commerce scale, asymmetric demand reality (Pareto),
+%   opaque selling concept, deployed examples, pooling mechanism, then name
+%   the two coupled levers (design and allocation) and state the open question.
+% Big Picture: Establishes that opaque selling is practically relevant and
+%   that designing it well requires choosing both which opaque products to
+%   offer and how to stock, the two levers the paper jointly optimizes.
+E-commerce platforms routinely face highly skewed and rapidly shifting demand across product variants.
+Following the Pareto principle, a small fraction of SKUs drives most of the sales, and consumer preferences move with seasons, viral trends, and individual browsing histories.
+A best-selling color of a garment may account for most of its unit sales, while several other colors sit on the shelf, a pattern that repeats across categories from electronics accessories to home furnishings.
+Traditional inventory management treats each variant independently, which leaves the retailer exposed to the full swings of each SKU's demand.
+To cope with this imbalance, a growing number of retailers have adopted opaque selling, a strategy in which a secondary product attribute such as color or style is revealed only after purchase.
+Some examples include Amazon's ``Color Selected for You'' feature, blind-box promotions on major e-commerce platforms, and Priceline's opaque hotel bookings (see Figure~\ref{fig:opaque product}).
+By offering opaque products to flexible buyers, the retailer pools inventory across variants and turns demand uncertainty into a practical advantage.
+Surplus stock of slow-moving variants is absorbed through opaque orders, while part of the demand for popular variants is redirected to keep inventory balanced across the assortment.
+How much of this pooling benefit is realized depends on two levers that the retailer controls jointly.
+The first is the opacity design, that is, which items are combined into each opaque product, how many opaque products are offered, and how these opaque products overlap.
+The second is the inventory allocation, that is, how total initial stock is distributed across the individual items so that supply matches the demand flow created by the design.
+How to set these two levers together, under asymmetric and time-varying demand, remains an open question with important implications for inventory efficiency.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\linewidth]{figs/fig_1.png}
+    \caption{An example of an opaque product}
+    \label{fig:opaque product}
+\end{figure}
+
+% --- PARAGRAPH 2: TRADE-OFF ---
+% Role: Articulate the core tension through both levers, not only the design.
+% Internal Logic: pooling promise, five-color example (popular+popular fails,
+%   popular+unpopular works), too-broad and too-narrow extremes, then name
+%   inventory allocation as the complementary lever and foreshadow the
+%   co-optimization story.
+% Big Picture: Motivates a principled framework that covers both levers,
+%   foreshadowing the connectivity insight and the joint-optimization message.
+First consider the design lever through a concrete example.
+A fashion retailer offering five color variants of a garment, where one color captures most of demand.
+Placing the two most popular colors into a single opaque product does little to balance inventory, because both variants already see strong demand and combining them does not redirect orders toward slow-moving stock.
+By contrast, pairing a popular color with an unpopular one steers excess demand toward underused inventory and evens out the depletion rates across the assortment, which is exactly the pooling benefit the retailer is looking for.
+An opaque product that is too broad, covering all $N$ items, requires a steep discount to compensate buyers for the extra uncertainty and eats into revenue.
+A design that is too narrow, made up of disjoint non-overlapping pairs, may balance load within each pair but does not connect inventory across the whole assortment, so the scope of pooling is limited.
+The main design lever is therefore how the opaque products overlap, that is, whether they share items in a way that lets demand flow across the entire product line.
+The second lever is inventory allocation.
+Even a well-overlapping design can lose its pooling benefit if stock is distributed in proportion to raw item popularity rather than in proportion to the demand flow the design creates.
+In the other direction, a small redistribution of stock, aligned with the design, can absorb the asymmetries the design alone cannot remove.
+Design and allocation are therefore not separate choices, but two sides of the same problem.
+
+% --- PARAGRAPH 3: DIFFICULTY ---
+% Role: Explain why the joint problem is technically hard.
+% Internal Logic: demand asymmetry + feature-driven dynamics + correlation,
+%   combinatorial explosion (doubly exponential), joint optimization over
+%   design, allocation, and real-time fulfillment under stochastic demand.
+% Big Picture: Justifies the need for a structural insight and sets up both
+%   the GCG theoretical contribution and the co-optimization message.
+Several features of the problem make a principled opacity design especially challenging.
+First, demand is asymmetric and time-varying.
+Customer choice probabilities depend on observable features such as demographics and purchase history, so the demand mix shifts continuously.
+In addition, demand for different variants can be correlated.
+A promotion that lifts one color can at the same time suppress another, which makes it hard to predict pooling benefits from marginal demand rates alone.
+Second, the design space is combinatorially explosive.
+The retailer must choose a collection of item subsets from $2^N$ possible subsets, which gives a doubly exponential number of candidate opacity designs.
+Even for a moderate number of items, for example $N=10$, searching through every design is infeasible.
+Third, the opacity design, the inventory allocation across items, and the real-time fulfillment rule must be chosen jointly under stochastic demand.
+Each lever interacts with the others.
+A good design paired with a poor allocation, or a good allocation paired with a naive fulfillment rule, can give up most of the pooling benefit.
+This three-way coupling makes the problem hard to solve analytically unless we can find a structural insight that simplifies it.
+
+% --- PARAGRAPH 4: THE GAP AND OUR RESEARCH QUESTION ---
+% Role: Identify what is missing in the literature and state the research Q.
+% Internal Logic: EYZ2026 closest work, three restrictions that are binding
+%   in realistic retail (symmetric demand, uniform allocation is not a
+%   decision, design is exogenous), balls-into-bins does not scale to skewed
+%   demand, industry heuristics ad hoc, state our research question in one
+%   clean sentence, preview the methodological requirement.
+% Big Picture: Frames our paper as answering a different research question
+%   rather than extending prior work, which is exactly what the user asked
+%   for: asymmetric demand + allocation as a decision + GCG framework +
+%   joint design-and-allocation optimization.
+A natural benchmark for our study is \cite{EYZ2026}, who first established the principle that ``a little flexibility goes a long way'' for opaque selling.
+Their analysis shows that under symmetric demand and uniform allocation, an opacity design satisfying an $\epsilon$-expanding condition, operated under a load balancing policy, achieves cost savings of the same order as full flexibility.
+Those assumptions are not minor technical conveniences.
+Once demand is skewed or inventory allocation becomes a decision, the relevant bottleneck is no longer the size of an item subset but the mismatch between the induced demand of that subset and the stock assigned to the items serving it.
+The balls-into-bins coupling then ceases to be the right analytical object.
+Industry practice, meanwhile, is still guided by ad hoc heuristics such as ``pair the two cheapest colors'' or ``group items by category'', with little guidance on when those rules actually preserve pooling value.
+Our paper therefore asks a different question: what structural property of an opacity design and its associated inventory allocation guarantees near-optimal inventory pooling under asymmetric and time-varying demand, and how should the retailer choose those two levers in practice?
+
+% --- PARAGRAPH 5: OUR ANSWER (MANAGERIAL) ---
+% Role: Answer the research question of P4 at a managerial level and state
+%   the practical implications for the retailer, without reproducing the
+%   technical specifics that appear in the Contributions block below.
+% Internal Logic: Name the structural answer (connectivity), identify the
+%   Generalized Chaining Gap (GCG) as the analytical lens that makes
+%   connectivity verifiable, give the two proxy-guided recipes at a
+%   prescriptive level (long chain with popular-with-unpopular pairing on
+%   the design side, and redistribute-the-same-stock on the allocation side),
+%   and close with the striking retailer-level implications and point forward
+%   to the Contributions.
+% Big Picture: Tells the reader what the paper means for practice before
+%   introducing the formal machinery, and cleanly sets up the Contributions
+%   so the two do not duplicate each other. Technical specifics deferred
+%   here include the exact Omega(1/sqrt(S)) order, the master theorem that
+%   unifies the asymmetric and time-varying cases, the two-term upper bound
+%   and proxy for the optimized GCG, the optimality class for the even
+%   allocation, and the unique optimality of the long chain at budget N.
+Our answer is to analyze opaque selling as a design problem on the induced bipartite graph between items and customer types.
+The key object is the Generalized Chaining Gap (GCG), which measures the minimum slack between the supply assigned to a subset of items and the effective demand that subset must absorb.
+Under the even-allocation benchmark, graph connectivity is what makes the GCG positive, and positive GCG is the central structural quantity that drives same-order savings as the fully flexible benchmark under load balancing.
+The same GCG logic then extends to general fixed allocations and to time-varying demand.
+For time-varying demand, the same conclusion holds whenever the per-period GCG stays bounded away from zero, a condition that holds in the regimes our numerical experiments exhibit and that can be checked directly on any candidate design.
+Appendix~\ref{sec:connection} shows that the balls-into-bins argument is recovered as a special symmetric benchmark, while the GCG formulation continues to apply when demand is asymmetric, allocation is endogenous, and the retailer seeks prescriptive design guidance.
+The precise statements are summarized in the contributions below.
+
+\subsection*{Our Contributions}
+
+\begin{enumerate}
+    % --- CONTRIBUTION 1 ---
+    % Role: Generalize EYZ2026 to the realistic regime and introduce the
+    %   bipartite-graph representation as the unified language.
+    % Selling points: asymmetric and time-varying demand, feature-driven
+    %   choice probabilities, general allocation vector c, bipartite-graph
+    %   representation accommodating arbitrary opacity designs.
+    \item {\bf Generalized opaque selling model.}
+    We formulate an opaque selling model with asymmetric and time-varying demand and a general inventory allocation vector $\mathbf{c}$.
+    Any opacity design, including multiple overlapping opaque products of different sizes, is encoded as a bipartite graph that links items to customer types.
+    Unlike subset-based formulations that treat each opaque product as a member of a collection, this bipartite-graph representation makes inter-product overlap and item-specific dedicated arcs first-class structural features, which are the objects the subsequent design analysis operates on.
+    This representation gives a common language for the design, allocation, and fulfillment problems and makes the connection to the process flexibility literature explicit.
+
+    % --- CONTRIBUTION 2 ---
+    % Role: GCG as the unifying structural condition, with robustness across
+    %   general fixed allocations and time-varying demand subsumed by a
+    %   single master theorem.
+    % Selling points: connectivity necessary and sufficient for positive GCG,
+    %   Omega(1/sqrt(S)) savings under load balancing (same order as full
+    %   flexibility), tighter bounds than balls-into-bins, sample-path GCG
+    %   handles three forms of non-stationarity.
+    \item {\bf Connectivity as a design principle through the GCG framework.}
+    We prove that under the even-allocation benchmark, graph connectivity makes the GCG positive, and the load balancing policy on positive-GCG designs attains relative cost savings of order $\Omega(1/\sqrt{S})$, the same order as the fully flexible benchmark.
+    The analysis works with slack in the induced bipartite graph rather than with subset-wise balls-into-bins inequalities, which yields a cleaner structural interpretation than the symmetric-demand benchmark of \cite{EYZ2026}.
+    A time-varying version of the GCG condition then extends the same guarantee to general fixed allocations and to non-stationary demand under a single theorem.
+
+    % --- CONTRIBUTION 3 ---
+    % Role: Optimization of inventory allocation and opacity design --
+    %   the contribution unique to this paper relative to EYZ2026.
+    % Selling points: two-term upper bound/proxy for max GCG, even
+    %   allocation is provably optimal on a broad class of designs, long
+    %   chain is uniquely GCG-optimal among 2-opaque designs at budget N,
+    %   popular-with-unpopular pairing improves the proxy bottleneck.
+    \item {\bf Optimization of inventory allocation and opacity design.}
+    We derive a computable two-term upper bound on the optimized GCG, with equality for designs whose induced graph has at most one cycle.
+    The bound separates a demand-retention term, driven by the base demand and transfer matrix, from a network-connectivity term, driven by the opacity design.
+    The decomposition identifies whether stocking or network structure is the dominant constraint on the savings.
+    On the allocation side, it yields provably optimal rules that reduce to an intuitive even allocation in many practical settings.
+    On the design side, it shows that the long-chain structure is GCG-optimal at the minimal budget of $N$ opaque products and that pairing popular items with unpopular ones improves the binding connectivity term in asymmetric markets.
+    Whether savings are constrained by network structure or by demand retention thus tells the retailer where to act, namely redesign the opaque menu when network connectivity binds and moderate the opaque-product discount when demand retention binds.
+
+    % --- CONTRIBUTION 4 ---
+    % Role: Numerical validation and managerial recipe. Re-anchored on what
+    %   the body actually contains (profit model, three utility models,
+    %   circle dominance, pairing rule, allocation lever). Lead-time / lost-
+    %   sales / backlogging claims of the earlier draft have been removed
+    %   because Section 3.2 of body.tex explicitly omits those features.
+    \item {\bf Numerical evidence and managerial recipe.}
+    We validate the theory using a random-utility profit model with Uniform, Normal, and Logistic taste shocks, covering both symmetric and asymmetric demand, a wide range of ordering costs, and multiple inventory levels.
+    We find that the circle (long-chain) design consistently delivers the highest profit across regimes, the popular-with-unpopular pairing rule dominates naive orderings, and rebalancing the inventory allocation can substantially improve the relative cost savings.
+    The experiments also clarify which conclusions survive from the symmetric benchmark and which are genuinely driven by asymmetry.
+\end{enumerate}
+
+% --- PARAGRAPH 6: ROADMAP ---
+% Role: Orient the reader to the paper's structure after the revision.
+% Internal Logic: Walk through Sections 2 to 8 of the revised body.tex.
+%   Correct the previous roadmap that mislabeled the numerical experiments
+%   as EC-only and missed Sections 5 and 6 entirely.
+% Big Picture: Navigational guide aligned with the actual section structure.
+The remainder unfolds as follows.
+Section~\ref{sec:literature_review} reviews the opaque selling and process flexibility literature.
+Section~\ref{sec:sufficient} introduces the bipartite-graph model and shows connectivity is necessary for positive GCG.
+Section~\ref{sec:quantity} proves connectivity suffices for $\Omega(1/\sqrt{S})$ savings under even allocation and load balancing.
+Section~\ref{sec: model-generalization-and-extensions} extends the guarantee to asymmetric allocations and time-varying demand.
+Section~\ref{sec: optimal-inventory-allocation-scheme} optimizes inventory allocation and opacity design jointly.
+Section~\ref{sec: numerical} validates the theory across diverse demand regimes.
+Section~\ref{sec:conclusion} concludes.
+Proofs and supplementary analysis appear in the online electronic companion.
+
+% =============================================================================
+% INTRODUCTION STRUCTURE SUMMARY (post-revision)
+% -----------------------------------------------
+% Paragraph       | Role                                                 | ~Words
+% -----------------------------------------------
+% P1 (Context)    | Pareto demand + opaque selling + two coupled levers  | ~230
+% P2 (Trade-off)  | Design lever + allocation lever, five-color example  | ~230
+% P3 (Difficulty) | Asymmetry, combinatorics, three-way joint optimum    | ~170
+% P4 (Research Q) | EYZ2026 special case + our new joint-optimization Q  | ~210
+% P5 (Answer)     | Managerial answer + two recipes + retailer upshot    | ~240
+% Contributions   | Four items: model, GCG theory, joint opt, numerics   | ~430
+% P6 (Roadmap)    | Sections 2 to 8 of the revised body.tex              | ~130
+% -----------------------------------------------
+% Total body text (excluding comments and markup): approx 1,640 words body +
+% 430 contributions = approx 1,700 to 1,900 words.
+%
+% Role split between P5 and Contributions: P5 delivers the managerial answer
+% to the research question of P4 and the retailer-facing implications.
+% The Contributions block carries the precise formal claims (bipartite-graph
+% representation, Omega(1/sqrt(S)) order, sample-path master theorem,
+% two-term upper bound/proxy for the optimized GCG, optimality class of the even
+% allocation, unique optimality of the long chain at budget N, and the
+% numerical evidence). The two blocks are deliberately non-overlapping.
+%
+% Style check: no em dashes, no semicolons, no emphasis font, terminology
+% locked across body and appendix (opaque product, opacity design, bipartite
+% graph, GCG, even allocation, load balancing policy, long chain, circle
+% design, traditional selling, fully flexible).
+% =============================================================================

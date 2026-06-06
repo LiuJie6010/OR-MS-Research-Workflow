@@ -5,6 +5,10 @@ routes:
       - pdf
       - literature
       - summarize
+      - read a paper
+      - how to read
+      - model abstraction
+      - core trade-off
       - published
       - top journal
     references:
@@ -43,23 +47,66 @@ routes:
       - rewrite
       - abstract
       - body
+      - main body
+      - result narrative
       - conclusion
       - appendix
       - management science style
     references:
       - references/management-science-writing.md
+    subroutines:
+      theorem-interpretation:
+        when:
+          - formal result needs interpretation
+          - theorem has no mechanism
+          - structural property needs economic meaning
+          - result narrative needs failure mode
+        references:
+          - references/theorem-interpretation.md
+          - references/proof-rigor.md
+        assets:
+          - assets/theorem-interpretation-template.md
+      managerial-insights:
+        when:
+          - result needs managerial implication
+          - practical recommendation lacks supported action
+          - post-result discussion needs regime mechanism action failure mode
+        references:
+          - references/managerial-insights.md
 
   introduction-writing:
     triggers:
       - introduction
       - intro
+      - annotated introduction
+      - structured annotation
       - contributions
       - roadmap
+      - after body
     references:
       - references/management-science-writing.md
       - references/introduction-writing.md
     assets:
       - assets/introduction-template.md
+
+  storyline-analysis:
+    triggers:
+      - storyline
+      - storyline analysis
+      - narrative arc
+      - paper story
+      - story logic
+      - compelling story
+      - first-glance hook
+      - insight analysis
+      - before submission
+    references:
+      - references/management-science-writing.md
+      - references/storyline-analysis.md
+      - references/theorem-interpretation.md
+      - references/managerial-insights.md
+    assets:
+      - assets/storyline-analysis-template.md
 
   theorem-and-proof:
     triggers:
@@ -100,6 +147,8 @@ routes:
       - references/management-science-writing.md
       - references/managerial-insights.md
       - references/theorem-interpretation.md
+    parent:
+      - management-science-writing
 
   reviewer-critique:
     triggers:
@@ -114,6 +163,23 @@ routes:
       - references/rigor-and-consistency.md
     assets:
       - assets/reviewer-report-template.md
+
+  pre-submission-review:
+    triggers:
+      - pre-submission
+      - final polish
+      - submission readiness
+      - full manuscript check
+      - consistency sweep
+      - rigor check
+      - terminology consistency
+    references:
+      - references/management-science-writing.md
+      - references/rigor-and-consistency.md
+      - references/proof-rigor.md
+      - references/experiment-design.md
+    assets:
+      - assets/pre-submission-review-template.md
 
   revision-audit:
     triggers:
