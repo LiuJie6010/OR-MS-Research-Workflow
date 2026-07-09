@@ -49,6 +49,8 @@ The top-level taste standard is a top-journal OM/OR register:
   and failure mode.
 - Match claim strength to proof status.
 - Preserve constants, assumptions, thresholds, feasible sets, and boundary cases.
+- Define every symbol, theorem label, assumption, and technical concept before
+  first use.
 - Avoid decorative AI-like prose, vague novelty claims, and unsupported
   managerial statements.
 - Keep terminology consistent across the introduction, model, results,

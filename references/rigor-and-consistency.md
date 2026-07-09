@@ -32,7 +32,8 @@ Use two levels of audit.
 5. Check numerical claims against implemented experiments.
 6. Check managerial insights against formal or numerical support.
 7. Check terminology consistency.
-8. Flag unsupported, overstated, duplicated, or missing claims.
+8. Check definition-before-use. Flag any symbol, theorem label, assumption, model object, or technical concept used before it is defined in the manuscript.
+9. Flag unsupported, overstated, duplicated, or missing claims.
 
 ### B. Pre-Submission Review Pass
 
@@ -41,7 +42,7 @@ Use this when the user asks for pre-submission review, final polish, full-manusc
 1. Create a review log before editing. Include paper title, target journal, review date, manuscript files inspected, and whether line numbers are exact or approximate.
 2. Do an initial full read-through and log obvious issues as `PRE.01`, `PRE.02`, etc. Do not fix silently.
 3. Review the manuscript section by section. Use passes such as Abstract and Introduction, Literature Review, Model and Main Results, each technical-result section, Numerical Study, Conclusion, and E-Companion Proofs. Adapt names to the actual manuscript.
-4. Within each pass, separate findings into Writing Quality, Technical Correctness, and Exposition. Writing Quality includes grammar, terminology, notation consistency, cross-reference style, caption-text mismatch, and informal phrasing.
+4. Within each pass, separate findings into Writing Quality, Technical Correctness, and Exposition. Writing Quality includes grammar, terminology, notation consistency, undefined notation or concepts, cross-reference style, caption-text mismatch, and informal phrasing.
 5. For technical sections, check theorem/proposition statements against proof logic, assumptions, notation, boundary cases, constants, equations, algorithms, and examples. Record positive verifications only when the check was actually done.
 6. For experiments, check that claims match implemented designs, baselines, tables, captions, parameter names, figures, and robustness results. Do not accept an introduction or abstract promise unless the experiment section supports it.
 7. Run a global consistency sweep after section passes. Include notation consistency, terminology consistency, cross-reference and label consistency, capitalization of formal elements, citation-year or publication-status concerns, and table/figure naming consistency.
@@ -96,6 +97,7 @@ For pre-submission review, use this report structure:
 - Counting "no issue found" entries as fixed issues.
 - Forgetting the appendix or electronic companion when the main text relies on deferred proofs.
 - Reporting guaranteed status without naming what was inspected.
+- Using notation, theorem labels, assumptions, or concepts before they are defined.
 
 ## Optional Full Example
 

@@ -38,8 +38,9 @@ If the draft contains a formal result with no mechanism or failure mode, invoke 
 6. Audit the managerial paragraph. Check whether each recommendation names the regime, mechanism, operational action, and failure mode. If not, use the managerial insights subroutine.
 7. Match claim status to proof status. Use theorem, proposition, corollary, example, discussion, or design lens according to what is actually proved.
 8. Preserve mathematical precision. Keep explicit constants, thresholds, asymptotic hypotheses, feasible sets, and benchmark definitions.
-9. Use human prose. Avoid decorative openers, vague adjectives, overexcited novelty claims, em dashes, semicolons, and generic AI phrasing.
-10. Lock one term per concept across introduction, body, appendix, figures, and captions.
+9. Enforce definition-before-use. Do not write any symbol, theorem label, assumption, model object, or technical concept until it has been defined in the manuscript up to that point. If the draft needs an object that is not yet defined, define it first, rewrite in plain language, or flag the gap explicitly.
+10. Use human prose. Avoid decorative openers, vague adjectives, overexcited novelty claims, em dashes, semicolons, and generic AI phrasing.
+11. Lock one term per concept across introduction, body, appendix, figures, and captions.
 
 ## Expected Output
 
@@ -62,3 +63,4 @@ Return polished prose plus a short note with:
 - Hiding the benchmark.
 - Making the introduction promise more than the body proves.
 - Treating theorem interpretation or managerial insight as isolated add-ons instead of part of the body narrative.
+- Using notation, theorem labels, assumptions, or concepts before they are defined.

@@ -11,6 +11,8 @@ Use this skill as an OM/OR research partner for theory-driven and analytically g
 
 Never invent citations, numerical results, theorem statements, proofs, experiments, or empirical evidence. If evidence is missing, mark the missing input and proceed with a conditional recommendation.
 
+Never invoke mathematical notation, theorem labels, assumptions, model objects, or technical concepts before they are defined in the manuscript at the point of use. Definition-before-use is a baseline for readability. If a draft depends on undefined objects, define them first, rewrite in plain language, or flag the gap explicitly.
+
 ## Routing
 
 Read `manifest.yaml` first, then load only the reference files needed for the user's task.
@@ -57,6 +59,7 @@ Prefer a top-journal OM/OR standard:
 - Preserve explicit constants, assumptions, and boundary cases.
 - Avoid decorative AI-like prose, overexcited novelty claims, em dashes, semicolons, and vague praise.
 - Lock terminology across introduction, body, and appendix.
+- Define every symbol, theorem label, assumption, and technical concept before first use.
 
 ## Assets
 
