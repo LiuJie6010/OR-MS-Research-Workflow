@@ -1,15 +1,17 @@
 ---
 name: or-ms-research-workflow
-description: Research and paper-writing workflow for operations management, operations research, and Management Science-style papers. Use when Codex helps with OM/OR literature reading, research brainstorming, idea feasibility, storyline or narrative-arc analysis, model/proof rigor, theorem interpretation, Management Science prose, introduction/abstract/body writing, numerical experiment design, managerial insights, reviewer critique, revision audits, or consistency checks across claims, assumptions, proofs, experiments, and implications.
+description: Research and paper-writing workflow for operations management, operations research, and Management Science-style papers. Use when Codex helps with OM/OR literature reading, research brainstorming, idea feasibility, storyline or narrative-arc analysis, model/proof rigor, theorem interpretation, Management Science prose, introduction/abstract/body writing, numerical experiment design, managerial insights, reviewer critique, revision audits, or consistency checks across claims, assumptions, proofs, experiments, notation, terminology, and implications.
 ---
 
 # OR/MS Research Workflow
 
 Use this skill as an OM/OR research partner for theory-driven and analytically grounded papers. Preserve rigor while making the managerial story legible.
 
-## Core Rule
+## Core Rules
 
 Never invent citations, numerical results, theorem statements, proofs, experiments, or empirical evidence. If evidence is missing, mark the missing input and proceed with a conditional recommendation.
+
+Before revising paper text, preserve the manuscript's notation and terminology discipline. Check existing usage first. The same notation must denote the same object throughout the paper, one object should not receive multiple notations, and a new symbol may be introduced only if it does not conflict with existing notation and is clearly defined. Likewise, use the paper's established term for each concept; do not create synonyms, renamed constructs, or undefined terminology unless the revision explicitly defines and motivates the new term.
 
 ## Routing
 
@@ -25,7 +27,7 @@ Read `manifest.yaml` first, then load only the reference files needed for the us
 - Numerical experiment plan, robustness checks, tables, or figures: load `references/experiment-design.md`.
 - Managerial implication or post-result discussion: load `references/management-science-writing.md` and `references/managerial-insights.md`; also load `references/theorem-interpretation.md` when the implication comes from a formal result.
 - Whole manuscript critique: load `references/reviewer-critique.md` and `references/rigor-and-consistency.md`.
-- Pre-submission review, final polish, rigor check, terminology consistency, or full manuscript check: load `references/rigor-and-consistency.md`; also load `references/proof-rigor.md` for theorem/proof-heavy papers and `references/experiment-design.md` when numerical or empirical claims are present. Use `assets/pre-submission-review-template.md`.
+- Pre-submission review, final polish, rigor check, notation consistency, terminology consistency, or full manuscript check: load `references/rigor-and-consistency.md`; also load `references/proof-rigor.md` for theorem/proof-heavy papers and `references/experiment-design.md` when numerical or empirical claims are present. Use `assets/pre-submission-review-template.md`.
 - Revision history, reviewer comments, co-author comments, diffs, or taste-memory updates: load `references/taste-evolution.md`.
 
 When a task spans multiple modules, load the minimum set that covers the request.
@@ -56,7 +58,7 @@ Prefer a top-journal OM/OR standard:
 - Distinguish theorem register from design-lens register.
 - Preserve explicit constants, assumptions, and boundary cases.
 - Avoid decorative AI-like prose, overexcited novelty claims, em dashes, semicolons, and vague praise.
-- Lock terminology across introduction, body, and appendix.
+- Lock notation and terminology across introduction, model, body, figures, captions, tables, and appendix.
 
 ## Assets
 

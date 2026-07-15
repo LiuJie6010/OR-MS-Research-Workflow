@@ -21,7 +21,7 @@ If the body is not yet stable, return a conditional outline and a body-informati
 - Research question.
 - Main analytical answer and contribution list.
 - Actual body-section structure for the roadmap.
-- Any local style rules from the author, such as prohibited punctuation, emphasis commands, or terminology locks.
+- Any local style rules from the author, such as prohibited punctuation, emphasis commands, notation locks, or terminology locks.
 
 ## Procedure
 
@@ -36,7 +36,7 @@ Use this annotated narrative architecture:
 7. P5 Managerial answer. Answer the research question at a plain-language level. Say what the paper means for practice before saying what it proves. Keep this block non-overlapping with the formal contribution list.
 8. Contributions block. Use a numbered list with specific contribution verbs. Use four items when possible: model or representation, main structural theorem and robustness, optimization or prescription, numerical or empirical evidence. Add or remove items only when the body truly supports it.
 9. Roadmap. Use one sentence per section and align labels with the actual manuscript.
-10. Structure summary. After the draft, include a concise summary with paragraph roles, approximate lengths, the P5-versus-contributions split, and terminology or style locks.
+10. Structure summary. After the draft, include a concise summary with paragraph roles, approximate lengths, the P5-versus-contributions split, and notation, terminology, or style locks.
 
 ## Annotation Protocol
 
@@ -93,6 +93,7 @@ Return either a paragraph-by-paragraph outline or polished prose. Also provide a
 - Does P5 avoid duplicating the formal contributions?
 - Does every contribution have support in the body?
 - Does the roadmap match the manuscript's actual section labels and order?
+- Does the draft preserve the manuscript's established notation and terminology?
 - Do the annotations expose enough structure for a human coauthor to edit the logic without rewriting the prose from scratch?
 
 ## Common Failure Modes
@@ -107,6 +108,7 @@ Return either a paragraph-by-paragraph outline or polished prose. Also provide a
 - Treating the closest paper as a small extension target when the introduction can frame a distinct research question.
 - Letting P5 repeat theorem statements already reserved for the contribution block.
 - Writing a roadmap from memory rather than from the actual body sections.
+- Renaming a body construct or introducing a new label for a concept that already has an established manuscript term.
 
 ## Optional Full Examples
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Audit consistency across the whole paper: question, abstract, introduction, model, assumptions, theorem claims, proofs, experiments, exposition, terminology, grammar, and managerial insights. For pre-submission review, perform a section-by-section audit and maintain a verification log. Do not mark any item as clean or verified unless the relevant text, proof, table, figure, cross-reference, or experiment claim has actually been checked.
+Audit consistency across the whole paper: question, abstract, introduction, model, assumptions, notation, theorem claims, proofs, experiments, exposition, terminology, grammar, and managerial insights. For pre-submission review, perform a section-by-section audit and maintain a verification log. Do not mark any item as clean or verified unless the relevant text, proof, table, figure, cross-reference, notation use, terminology use, or experiment claim has actually been checked.
 
 ## When to Use
 
@@ -17,7 +17,7 @@ Use for manuscript-wide checks, pre-submission audits, revision planning, or whe
 - Managerial insights and conclusion.
 - Appendix or electronic companion proofs.
 - Current manuscript files, or extracted text with stable section and line references.
-- Author style constraints, terminology preferences, and target journal.
+- Author style constraints, notation preferences, terminology preferences, and target journal.
 
 ## Procedure
 
@@ -31,8 +31,10 @@ Use two levels of audit.
 4. Check theorem/proposition statements against proof status.
 5. Check numerical claims against implemented experiments.
 6. Check managerial insights against formal or numerical support.
-7. Check terminology consistency.
-8. Flag unsupported, overstated, duplicated, or missing claims.
+7. Build a notation and terminology ledger from the manuscript before proposing wording changes. Record each symbol's intended object, each concept's chosen term, and any conflicting variants.
+8. Check notation consistency: the same symbol denotes the same object, each object has one primary symbol, and new symbols are defined before use.
+9. Check terminology consistency: the same concept uses the same term, variants are intentional and defined, and no undefined construct names are introduced.
+10. Flag unsupported, overstated, duplicated, or missing claims.
 
 ### B. Pre-Submission Review Pass
 
@@ -44,7 +46,7 @@ Use this when the user asks for pre-submission review, final polish, full-manusc
 4. Within each pass, separate findings into Writing Quality, Technical Correctness, and Exposition. Writing Quality includes grammar, terminology, notation consistency, cross-reference style, caption-text mismatch, and informal phrasing.
 5. For technical sections, check theorem/proposition statements against proof logic, assumptions, notation, boundary cases, constants, equations, algorithms, and examples. Record positive verifications only when the check was actually done.
 6. For experiments, check that claims match implemented designs, baselines, tables, captions, parameter names, figures, and robustness results. Do not accept an introduction or abstract promise unless the experiment section supports it.
-7. Run a global consistency sweep after section passes. Include notation consistency, terminology consistency, cross-reference and label consistency, capitalization of formal elements, citation-year or publication-status concerns, and table/figure naming consistency.
+7. Run a global consistency sweep after section passes. Include notation consistency, terminology consistency, cross-reference and label consistency, capitalization of formal elements, citation-year or publication-status concerns, and table/figure naming consistency. Treat notation and terminology as manuscript-level contracts, not local style choices.
 8. Reconcile pre-read issues with the systematic pass. If a pre-read issue is fixed or reclassified, point to the later issue ID.
 9. Produce summary statistics by category and status. Exclude positive "Verified" technical checks from issue counts unless they required a fix.
 10. End with low-confidence or author-decision items for coauthor review.
@@ -89,9 +91,13 @@ For pre-submission review, use this report structure:
 - Revising a paragraph locally while breaking the paper's global promise.
 - Letting the introduction advertise an unimplemented numerical feature.
 - Changing terminology between body and appendix.
+- Changing notation between model, results, experiments, and appendix.
+- Creating new terminology during polish when an established manuscript term already exists.
+- Defining one concept twice under different names or one symbol twice for different objects.
 - Forgetting assumptions in the abstract or managerial implications.
 - Marking a proof as verified after only reading the theorem statement.
 - Declaring terminology clean without searching or checking variants across the whole manuscript.
+- Declaring notation clean without checking equations, theorem statements, proofs, tables, captions, and appendix.
 - Treating grammar polish as a substitute for technical rigor.
 - Counting "no issue found" entries as fixed issues.
 - Forgetting the appendix or electronic companion when the main text relies on deferred proofs.

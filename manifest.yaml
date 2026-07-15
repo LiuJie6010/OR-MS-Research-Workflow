@@ -172,6 +172,7 @@ routes:
       - full manuscript check
       - consistency sweep
       - rigor check
+      - notation consistency
       - terminology consistency
     references:
       - references/management-science-writing.md
