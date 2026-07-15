@@ -41,11 +41,21 @@ routes:
     assets:
       - assets/research-plan-template.md
 
+  abstract-writing:
+    triggers:
+      - abstract
+      - abstract revision
+      - structured abstract
+      - journal abstract
+      - MSOM abstract
+      - abstract word limit
+    references:
+      - references/abstract-writing.md
+
   management-science-writing:
     triggers:
       - write
       - rewrite
-      - abstract
       - body
       - main body
       - result narrative

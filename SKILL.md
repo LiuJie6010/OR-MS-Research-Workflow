@@ -22,7 +22,8 @@ Read `manifest.yaml` first, then load only the reference files needed for the us
 - Provided paper, PDF text, notes, or citation context: load `references/literature-reading.md`.
 - Vague research idea: load `references/research-brainstorming.md`.
 - Concrete idea needing validation: load `references/feasibility-check.md`.
-- Main body writing, result narrative, abstract, conclusion, appendix, or paper-level style revision: load `references/management-science-writing.md`.
+- Abstract drafting, revision, or journal-format calibration: load `references/abstract-writing.md`.
+- Main body writing, result narrative, conclusion, appendix, or paper-level style revision: load `references/management-science-writing.md`.
 - Introduction, contribution block, abstract-adjacent overview, or roadmap: load `references/management-science-writing.md` and `references/introduction-writing.md`; treat the introduction as a later-stage module that should be written from the finalized body, contributions, and section structure when possible.
 - Storyline analysis, narrative arc, paper story, first-glance hook, or insight logic before submission: load `references/storyline-analysis.md`; also load `references/management-science-writing.md`, `references/theorem-interpretation.md`, and `references/managerial-insights.md` as needed to assess section-level story, result-to-insight bridges, and managerial positioning. Use `assets/storyline-analysis-template.md`.
 - Theorem, proposition, lemma, corollary, or proof text: load `references/theorem-interpretation.md` and `references/proof-rigor.md`; also load `references/management-science-writing.md` when the user wants body prose rather than only a rigor check.
