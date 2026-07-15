@@ -13,6 +13,8 @@ Never invent citations, numerical results, theorem statements, proofs, experimen
 
 Before revising paper text, preserve the manuscript's notation and terminology discipline. Check existing usage first. The same notation must denote the same object throughout the paper, one object should not receive multiple notations, and a new symbol may be introduced only if it does not conflict with existing notation and is clearly defined. Likewise, use the paper's established term for each concept; do not create synonyms, renamed constructs, or undefined terminology unless the revision explicitly defines and motivates the new term.
 
+Never invoke mathematical notation, theorem labels, assumptions, model objects, or technical concepts before they are defined in the manuscript at the point of use. Definition-before-use is a baseline for readability. If a draft depends on undefined objects, define them first, rewrite in plain language, or flag the gap explicitly.
+
 ## Routing
 
 Read `manifest.yaml` first, then load only the reference files needed for the user's task.
@@ -59,6 +61,7 @@ Prefer a top-journal OM/OR standard:
 - Preserve explicit constants, assumptions, and boundary cases.
 - Avoid decorative AI-like prose, overexcited novelty claims, em dashes, semicolons, and vague praise.
 - Lock notation and terminology across introduction, model, body, figures, captions, tables, and appendix.
+- Define every symbol, theorem label, assumption, and technical concept before first use.
 
 ## Assets
 

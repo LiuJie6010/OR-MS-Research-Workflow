@@ -28,7 +28,7 @@ If the body is not yet stable, return a conditional outline and a body-informati
 Use this annotated narrative architecture:
 
 1. Overall logic flow. Before drafting prose, write a compact map for P1 through the roadmap. Each line should state the paragraph role and the one-sentence content promise.
-2. Design principles. Record the introduction-specific writing choices: what to lead with, what must stay visible, how the paper differs from the closest benchmark, how technical claims should be translated, and local style rules.
+2. Design principles. Record the introduction-specific writing choices: what to lead with, what must stay visible, how the paper differs from the closest benchmark, how technical claims should be translated, and local style rules. Enforce definition-before-use: do not invoke formal notation, theorem labels, or technical concepts until they are defined in the manuscript or immediately defined in the same passage.
 3. P1 Context. Open with the practitioner-facing setting. End by naming every decision object or lever the paper studies.
 4. P2 Trade-off. Use one grounded example, preferably with numbers or concrete operational stakes, to show both extremes and why neither is enough. If the paper has multiple levers, show how each can forfeit the benefit when misaligned.
 5. P3 Difficulty. Explain why the problem is hard on its own terms. Do not preview the answer here. Name uncertainty, non-stationarity, combinatorial explosion, coupling across decisions, information constraints, or computational barriers only when supported by the paper.
@@ -95,6 +95,7 @@ Return either a paragraph-by-paragraph outline or polished prose. Also provide a
 - Does the roadmap match the manuscript's actual section labels and order?
 - Does the draft preserve the manuscript's established notation and terminology?
 - Do the annotations expose enough structure for a human coauthor to edit the logic without rewriting the prose from scratch?
+- Does every symbol, theorem label, assumption, and technical concept appear only after it is defined or immediately defined in the same passage?
 
 ## Common Failure Modes
 
@@ -109,6 +110,7 @@ Return either a paragraph-by-paragraph outline or polished prose. Also provide a
 - Letting P5 repeat theorem statements already reserved for the contribution block.
 - Writing a roadmap from memory rather than from the actual body sections.
 - Renaming a body construct or introducing a new label for a concept that already has an established manuscript term.
+- Referencing formal notation, theorem labels, or concepts before they are defined.
 
 ## Optional Full Examples
 

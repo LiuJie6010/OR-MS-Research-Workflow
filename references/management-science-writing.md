@@ -39,8 +39,9 @@ If the draft contains a formal result with no mechanism or failure mode, invoke 
 7. Match claim status to proof status. Use theorem, proposition, corollary, example, discussion, or design lens according to what is actually proved.
 8. Preserve mathematical precision. Keep explicit constants, thresholds, asymptotic hypotheses, feasible sets, and benchmark definitions.
 9. Before changing notation or naming a concept, check existing manuscript usage. Keep one notation per object and one object per notation. Keep one term per concept unless the paper explicitly defines a replacement.
-10. Use human prose. Avoid decorative openers, vague adjectives, overexcited novelty claims, em dashes, semicolons, and generic AI phrasing.
-11. Lock notation and terminology across introduction, model, body, appendix, figures, tables, and captions.
+10. Enforce definition-before-use. Do not write any symbol, theorem label, assumption, model object, or technical concept until it has been defined in the manuscript up to that point. If the draft needs an object that is not yet defined, define it first, rewrite in plain language, or flag the gap explicitly.
+11. Use human prose. Avoid decorative openers, vague adjectives, overexcited novelty claims, em dashes, semicolons, and generic AI phrasing.
+12. Lock notation and terminology across introduction, model, body, appendix, figures, tables, and captions.
 
 ## Expected Output
 
@@ -66,3 +67,4 @@ Return polished prose plus a short note with:
 - Treating theorem interpretation or managerial insight as isolated add-ons instead of part of the body narrative.
 - Introducing a fresh synonym, construct name, or symbol without checking whether the manuscript already defines one.
 - Reusing an existing symbol for a different object, or assigning multiple symbols to the same object.
+- Using notation, theorem labels, assumptions, or concepts before they are defined.

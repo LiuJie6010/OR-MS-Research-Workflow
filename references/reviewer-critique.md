@@ -23,7 +23,8 @@ Use for full paper reviews, section reviews, mock referee reports, revision plan
 4. List minor concerns only after major concerns.
 5. Separate fixable writing issues from substantive research risks.
 6. Check whether abstract/introduction promises are supported by body results.
-7. Recommend revision priorities in order.
+7. Check definition-before-use. Flag notation, theorem labels, assumptions, or concepts used before they are defined.
+8. Recommend revision priorities in order.
 
 ## Expected Output
 
@@ -44,3 +45,4 @@ Return a reviewer report with:
 - Missing overclaims.
 - Ignoring proof-status mismatch.
 - Treating lack of clarity and lack of contribution as the same issue.
+- Missing undefined notation, theorem labels, or concepts that hurt readability.
