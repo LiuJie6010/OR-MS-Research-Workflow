@@ -26,12 +26,13 @@ Use a model-first pass before reading linearly.
 
 After the model-first pass:
 
-6. State the paper's core research question.
-7. Classify contribution type: new model, new setting, structural theorem, algorithm, empirical evidence, design prescription, robustness, or synthesis.
-8. Explain why the paper could be publishable: importance, novelty, rigor, evidence, clarity, and positioning.
-9. Distinguish what is borrowed, extended, and genuinely new.
-10. Extract transferable writing or research-design lessons.
-11. Do not infer unsupported claims from title, abstract, or reputation alone.
+6. Build a source-terminology record under `terminology-discipline.md`. Preserve the paper's exact terms for constructs, model objects, mechanisms, regimes, policies, metrics, algorithms, acronyms, and named results; identify where each term is defined when available. Mark any plain-language explanation as descriptive paraphrase rather than source terminology.
+7. State the paper's core research question.
+8. Classify contribution type: new model, new setting, structural theorem, algorithm, empirical evidence, design prescription, robustness, or synthesis.
+9. Explain why the paper could be publishable: importance, novelty, rigor, evidence, clarity, and positioning.
+10. Distinguish what is borrowed, extended, and genuinely new.
+11. Extract transferable writing or research-design lessons.
+12. Do not infer unsupported claims from title, abstract, reputation, or model familiarity alone.
 
 ## Five Reading Questions
 
@@ -70,3 +71,4 @@ Use the literature note template when useful:
 - Praising publishability vaguely.
 - Inventing literature relationships not present in the text.
 - Saying "this paper can be extended" without naming the transferable trade-off, new friction, or altered assumption.
+- Presenting a descriptive paraphrase as the paper's terminology or calling a term standard without an identifiable source.

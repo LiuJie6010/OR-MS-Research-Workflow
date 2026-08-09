@@ -84,8 +84,10 @@ Status discipline:
 
 ### Terminology Consistency
 
-| Concept | Chosen Term | Variants Found | Resolution | Status |
-|---------|-------------|----------------|------------|--------|
+| Concept | Manuscript Term | Definition Location | Literature Term and Evidence | Variants Found | Proposed New Term | Author Approval | Resolution | Status |
+|---------|-----------------|---------------------|------------------------------|----------------|-------------------|-----------------|------------|--------|
+
+Use neutral descriptive wording for every proposed new term whose status is `Author Decision Needed`. Do not mark terminology `Clean` unless manuscript definitions, identifiable literature evidence where needed, variants, and pending decisions were checked.
 
 ### Cross-Reference, Citation, Table, and Figure Check
 

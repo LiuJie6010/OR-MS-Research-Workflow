@@ -1,4 +1,32 @@
+required_companions:
+  terminology-discipline:
+    when:
+      - technical terminology is used or revised
+      - a construct, mechanism, regime, policy, metric, algorithm, acronym, or result is named
+      - terminology provenance or consistency is audited
+    references:
+      - references/terminology-discipline.md
+    assets:
+      - assets/terminology-decision-template.md
+
 routes:
+  terminology-discipline:
+    triggers:
+      - terminology
+      - technical term
+      - construct name
+      - name this construct
+      - naming convention
+      - acronym
+      - term provenance
+      - terminology evidence
+      - proposed new term
+      - coin a term
+    references:
+      - references/terminology-discipline.md
+    assets:
+      - assets/terminology-decision-template.md
+
   literature-reading:
     triggers:
       - paper

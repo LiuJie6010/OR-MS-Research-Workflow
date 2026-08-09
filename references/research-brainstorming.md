@@ -23,7 +23,8 @@ Use when the user has an ambiguous idea, observed phenomenon, industry setting, 
 4. For each candidate, propose a minimum model and a possible contribution.
 5. Identify closest-risk literature categories without inventing specific citations.
 6. Score each candidate on importance, novelty risk, tractability, evidence path, and journal fit.
-7. Recommend the next validation step, not a full paper.
+7. Apply `terminology-discipline.md`. Reuse manuscript-defined terms, then identifiable literature terms. Otherwise describe candidate constructs and mechanisms neutrally. Propose a new name only through the terminology-decision protocol, keep it out of the working discussion and draft while pending, and ask the author to approve, reject, or revise it.
+8. Recommend the next validation step, not a full paper.
 
 ## Expected Output
 
@@ -41,3 +42,4 @@ Return:
 - Generating fashionable but non-executable topics.
 - Ignoring whether the result can be proved, simulated, or tested.
 - Treating a technique as the contribution.
+- Coining a polished construct or mechanism name before checking the manuscript and literature.

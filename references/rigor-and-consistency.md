@@ -31,9 +31,9 @@ Use two levels of audit.
 4. Check theorem/proposition statements against proof status.
 5. Check numerical claims against implemented experiments.
 6. Check managerial insights against formal or numerical support.
-7. Build a notation and terminology ledger from the manuscript before proposing wording changes. Record each symbol's intended object, each concept's chosen term, and any conflicting variants.
+7. Build a notation and terminology ledger from the manuscript before proposing wording changes. For terminology, record the concept, manuscript term, formal definition location, identifiable literature term and evidence, conflicting variants, current resolution, proposed-new-term status, and author approval.
 8. Check notation consistency: the same symbol denotes the same object, each object has one primary symbol, and new symbols are defined before use.
-9. Check terminology consistency: the same concept uses the same term, variants are intentional and defined, and no undefined construct names are introduced.
+9. Check terminology consistency under `terminology-discipline.md`: the same concept uses the same manuscript-defined term; literature synonyms appear only when positioning or clarity requires them; variants are intentional and defined; and no unsupported or pending construct name is adopted.
 10. Check definition-before-use. Flag any symbol, theorem label, assumption, model object, or technical concept used before it is defined in the manuscript.
 11. Flag unsupported, overstated, duplicated, or missing claims.
 
@@ -52,12 +52,15 @@ Use this when the user asks for pre-submission review, final polish, full-manusc
 9. Produce summary statistics by category and status. Exclude positive "Verified" technical checks from issue counts unless they required a fix.
 10. End with low-confidence or author-decision items for coauthor review.
 
+For any proposed new term, use `../assets/terminology-decision-template.md`, assign `Author Decision Needed`, and keep neutral descriptive wording in all proposed manuscript edits until approval.
+
 ## Verification Discipline
 
 - Use IDs that encode location: `S1.01` for Section 1 issue 1, `S9.03` for E-Companion issue 3, and `G10.01` for global sweep issues.
 - Use types: Grammar, Terminology, Technical, Exposition, Notation, Cross-reference, Citation, Table/Figure, Experiment.
 - Use confidence levels: High for objective or directly verified issues, Medium for likely but context-sensitive issues, Low for author judgment or taste.
 - Use statuses: Identified, Fixed, Deferred, Author Decision Needed, Verified, Clean, No action needed.
+- Use `Author Decision Needed` for every unapproved proposed technical term or manuscript-literature naming conflict that requires a terminology change.
 - Reserve `Verified` for technical claims, proofs, algorithms, or references that were checked in substance.
 - Reserve `Clean` for a completed sweep with no issue found.
 - If the manuscript files are incomplete, say exactly which checks could not be guaranteed.
@@ -94,6 +97,8 @@ For pre-submission review, use this report structure:
 - Changing terminology between body and appendix.
 - Changing notation between model, results, experiments, and appendix.
 - Creating new terminology during polish when an established manuscript term already exists.
+- Treating a literature synonym as permission to replace a formally defined manuscript term.
+- Recording an unverified recollection as literature evidence for a term.
 - Defining one concept twice under different names or one symbol twice for different objects.
 - Forgetting assumptions in the abstract or managerial implications.
 - Marking a proof as verified after only reading the theorem statement.

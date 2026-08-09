@@ -15,6 +15,7 @@ Use for simulation plans, computational experiments, numerical sections, robustn
 - Parameters, instance classes, and uncertainty model.
 - Intended managerial insights.
 - Computational budget.
+- Manuscript-defined names for parameters, instance classes, baselines, policies, metrics, algorithms, and regimes.
 
 ## Procedure
 
@@ -25,7 +26,8 @@ Use for simulation plans, computational experiments, numerical sections, robustn
 5. Include sensitivity checks around assumptions that theory fixes.
 6. Use figures for mechanism and tables for robustness or summary comparisons.
 7. Write the section so every experiment answers a named question.
-8. Do not make causal or universal claims beyond the experiment design.
+8. Apply `terminology-discipline.md`. Preserve manuscript-defined names across code-facing parameters, prose, tables, figures, legends, and captions. If the manuscript has no term, use an identifiable literature term or neutral description; do not invent a benchmark, metric, regime, or algorithm name inside the numerical section.
+9. Do not make causal or universal claims beyond the experiment design.
 
 ## Expected Output
 
@@ -46,3 +48,4 @@ Return:
 - Reporting only favorable cases.
 - Showing robustness without explaining which assumption is being stressed.
 - Making plots pretty but not interpretable.
+- Renaming parameters, policies, metrics, or regimes between the model, experiments, figures, tables, and captions.

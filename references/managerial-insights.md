@@ -16,6 +16,10 @@ Use after propositions, theorems, examples, numerical findings, robustness check
 - Benchmark or alternative policy.
 - Practical decision object.
 
+## Terminology Checkpoint
+
+Apply `terminology-discipline.md`. Preserve the result's manuscript-defined names for regimes, mechanisms, policies, metrics, and decision objects. Do not create a new policy name, mechanism label, or managerial acronym to make the paragraph sound memorable. When no supported term exists, use neutral operational language and place any candidate name in a separate terminology-decision note.
+
 ## Procedure
 
 Use the four-part paragraph template:
@@ -37,3 +41,4 @@ Return one polished paragraph plus a short evidence note identifying which theor
 - Omitting the failure mode.
 - Giving a recommendation that is not supported by the result.
 - Hiding whether the recommendation is offline design, real-time control, or diagnostic interpretation.
+- Inventing a memorable policy or mechanism name that the manuscript or literature does not support.

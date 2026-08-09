@@ -15,6 +15,10 @@ Use after theorem, proposition, lemma, corollary, example, or numerical result s
 - Result type: equivalence, bound, monotonicity, convexity, structure, approximation, robustness, or counterexample.
 - Intended managerial message.
 
+## Terminology Checkpoint
+
+Apply `terminology-discipline.md`. Reuse the formal statement's names for objects, conditions, regimes, mechanisms, benchmarks, and policies. Do not coin a nickname for a theorem, structural property, mechanism, or design principle during interpretation. If the formal result lacks an adequate term, use neutral descriptive wording and route any candidate label through the terminology-decision protocol.
+
 ## Procedure
 
 For each result, write in this order:
@@ -42,3 +46,4 @@ Return:
 - Calling a diagnostic an optimal policy.
 - Presenting an order result as an exact equality.
 - Omitting the failure mode.
+- Introducing an unsupported nickname or mechanism label that does not appear in the manuscript or identifiable literature.

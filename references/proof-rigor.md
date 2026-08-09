@@ -12,10 +12,13 @@ Use for theorem/proposition review, proof sketches, appendix writing, formal sta
 
 - Formal statement.
 - Definitions, assumptions, and notation.
+- Manuscript-defined technical terms and their definition locations.
 - Proof or proof sketch.
 - Any asymptotic regime, thresholds, constants, or benchmark result.
 
 ## Procedure
+
+Apply `terminology-discipline.md` before revising definitions or proof prose. Preserve the statement's exact terms for objects, conditions, regimes, algorithms, and results. Treat a terminology change as a manuscript-level decision, not a local proof edit; flag unsupported or conflicting labels and never replace them silently.
 
 1. Verify statement precision. Check quantifiers, feasible sets, parameter ranges, and edge cases.
 2. Match proof to claim. Ensure the proof establishes the exact statement, not a nearby intuition.
@@ -43,3 +46,4 @@ Return:
 - Treating borrowed proof machinery as a new contribution.
 - Ignoring equality cases.
 - Using "optimal" without specifying the feasible set.
+- Renaming a formal object or result inside a proof without reconciling the definition and every manuscript occurrence.

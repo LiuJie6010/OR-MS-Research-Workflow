@@ -2,6 +2,12 @@
 
 ## One-Sentence Thesis
 
+## Source Terminology Record
+
+| Concept | Paper's Exact Term | Definition Location | Descriptive Paraphrase | Notes |
+| --- | --- | --- | --- | --- |
+| [Concept] | [Exact source term] | [Section/page/equation] | [Plain-language explanation] | [Variant or ambiguity] |
+
 ## 1. Model Abstraction
 
 ### Reality Compressed Into What Problem?

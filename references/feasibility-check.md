@@ -24,7 +24,8 @@ Use when the user already has a research idea, model sketch, conjecture, prelimi
 4. Identify proof targets and likely bottlenecks.
 5. Identify experiment targets: robustness, benchmark comparison, mechanism visualization, extensions not covered by theory.
 6. Compare the idea against likely top-journal expectations.
-7. Recommend continue, revise, narrow, or park.
+7. Apply `terminology-discipline.md`. Check whether each technical label is manuscript-defined, supported by identifiable literature, or only descriptive. Treat rebranding an established concept as a novelty risk, and route any genuinely new candidate term to an author decision before adopting it.
+8. Recommend continue, revise, narrow, or park.
 
 ## Expected Output
 
@@ -45,3 +46,4 @@ Return a feasibility memo with:
 - Requiring experiments to prove the main claim when the paper is theory-driven.
 - Ignoring closest-paper overlap.
 - Overbuilding the model before finding the mechanism.
+- Mistaking a new label for a new construct or contribution.

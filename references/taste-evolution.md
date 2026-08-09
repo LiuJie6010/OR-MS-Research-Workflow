@@ -30,6 +30,7 @@ For top-paper taste distillation:
 2. Extract publication logic, introduction architecture, contribution framing, theorem-to-insight style, experiment narrative, and credibility moves.
 3. Merge repeated patterns into the relevant module only after they appear useful across papers.
 4. Keep project-specific taste separate from general OM/OR taste.
+5. Apply `terminology-discipline.md` to terminology lessons. Record an author-approved new term as a project-specific decision by default. Promote it to general skill guidance only when independent, identifiable literature supports the usage; never generalize it merely because one manuscript adopted it.
 
 ## Expected Output
 
@@ -46,3 +47,4 @@ Return:
 - Copying a paper's prose instead of distilling its structure.
 - Overfitting to one famous professor's style.
 - Mixing project-specific terminology into the general skill.
+- Treating author approval of a project term as evidence that the term is established in the literature.

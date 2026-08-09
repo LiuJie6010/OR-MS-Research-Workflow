@@ -1,6 +1,6 @@
 ---
 name: or-ms-research-workflow
-description: Research and paper-writing workflow for operations management, operations research, and Management Science-style papers. Use when Codex helps with OM/OR literature reading, research brainstorming, idea feasibility, storyline or narrative-arc analysis, model/proof rigor, theorem interpretation, Management Science prose, introduction/abstract/body writing, numerical experiment design, managerial insights, reviewer critique, revision audits, or consistency checks across claims, assumptions, proofs, experiments, notation, terminology, and implications.
+description: Research and paper-writing workflow for operations management, operations research, and Management Science-style papers. Use when Codex helps with OM/OR literature reading, research brainstorming, idea feasibility, storyline or narrative-arc analysis, model/proof rigor, theorem interpretation, Management Science prose, introduction/abstract/body writing, numerical experiment design, managerial insights, terminology selection or provenance, technical-construct naming, reviewer critique, revision audits, or consistency checks across claims, assumptions, proofs, experiments, notation, terminology, and implications.
 ---
 
 # OR/MS Research Workflow
@@ -11,13 +11,19 @@ Use this skill as an OM/OR research partner for theory-driven and analytically g
 
 Never invent citations, numerical results, theorem statements, proofs, experiments, or empirical evidence. If evidence is missing, mark the missing input and proceed with a conditional recommendation.
 
-Before revising paper text, preserve the manuscript's notation and terminology discipline. Check existing usage first. The same notation must denote the same object throughout the paper, one object should not receive multiple notations, and a new symbol may be introduced only if it does not conflict with existing notation and is clearly defined. Likewise, use the paper's established term for each concept; do not create synonyms, renamed constructs, or undefined terminology unless the revision explicitly defines and motivates the new term.
+Treat terminology as a provenance-controlled manuscript contract in both discussion and manuscript text. This rule covers technical constructs, model objects, mechanisms, regimes, policies, metrics, algorithms, acronyms, and named results, but not ordinary prose. Use this hierarchy: (1) the term formally defined in the current manuscript; (2) if none exists, an established term supported by identifiable literature; and (3) if neither exists, neutral descriptive wording. Model familiarity alone is not evidence that a term is established.
+
+Never introduce a new technical label silently. If a new term may be useful, identify it as proposed new terminology, report the manuscript and literature evidence checked, explain why existing terms are insufficient, present alternatives, and request the author's approval. Keep the candidate term only in the terminology-decision note and use neutral descriptive wording elsewhere until approval. After approval, formally define it in the manuscript before first use, record that definition location, and then use it consistently as a manuscript-defined term. When the manuscript term differs from the literature, preserve the manuscript term and mention the literature synonym only when positioning or reader clarity requires it.
+
+Before revising paper text, preserve the manuscript's notation discipline. Check existing usage first. The same notation must denote the same object throughout the paper, one object should not receive multiple notations, and a new symbol may be introduced only if it does not conflict with existing notation and is clearly defined.
 
 Never invoke mathematical notation, theorem labels, assumptions, model objects, or technical concepts before they are defined in the manuscript at the point of use. Definition-before-use is a baseline for readability. If a draft depends on undefined objects, define them first, rewrite in plain language, or flag the gap explicitly.
 
 ## Routing
 
 Read `manifest.yaml` first, then load only the reference files needed for the user's task.
+
+Load `references/terminology-discipline.md` as a required companion whenever a task uses, creates, revises, or audits technical terminology. Use `assets/terminology-decision-template.md` whenever a genuinely new term is being considered. A direct request about terminology selection, construct naming, acronyms, or term provenance routes to this companion even when no other module is needed.
 
 - Provided paper, PDF text, notes, or citation context: load `references/literature-reading.md`.
 - Vague research idea: load `references/research-brainstorming.md`.
@@ -31,6 +37,7 @@ Read `manifest.yaml` first, then load only the reference files needed for the us
 - Managerial implication or post-result discussion: load `references/management-science-writing.md` and `references/managerial-insights.md`; also load `references/theorem-interpretation.md` when the implication comes from a formal result.
 - Whole manuscript critique: load `references/reviewer-critique.md` and `references/rigor-and-consistency.md`.
 - Pre-submission review, final polish, rigor check, notation consistency, terminology consistency, or full manuscript check: load `references/rigor-and-consistency.md`; also load `references/proof-rigor.md` for theorem/proof-heavy papers and `references/experiment-design.md` when numerical or empirical claims are present. Use `assets/pre-submission-review-template.md`.
+- Terminology selection, construct naming, acronym choice, terminology provenance, or a proposed new term: load `references/terminology-discipline.md`. Use `assets/terminology-decision-template.md` when no manuscript-defined or literature-supported term is adequate.
 - Revision history, reviewer comments, co-author comments, diffs, or taste-memory updates: load `references/taste-evolution.md`.
 
 When a task spans multiple modules, load the minimum set that covers the request.

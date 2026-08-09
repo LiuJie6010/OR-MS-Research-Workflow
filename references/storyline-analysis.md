@@ -27,6 +27,8 @@ Keep these separate. In storyline analysis, flag technical issues only when they
 
 ## Procedure
 
+Apply `terminology-discipline.md` while summarizing the story. Preserve manuscript-defined names when technical specificity is necessary, but use neutral descriptive prose when removing jargon. Do not create a memorable nickname for the main idea, mechanism, policy, algorithm, or result. Put any genuinely useful candidate name in a separate terminology-decision note and leave it out of the storyline report until approval.
+
 1. Identify the big-picture story in one quoted paragraph. It should be memorable enough that a referee could repeat it.
 2. Extract the narrative arc as a compact chain, such as `Practical Problem -> Structural Insight -> Algorithm -> Guarantee -> Experiments -> Managerial Meaning`.
 3. Diagnose whether the paper has a strong first-glance hook. Check whether the abstract and introduction quickly reveal the decision problem, stakes, trade-off, and main insight.
@@ -79,6 +81,7 @@ Use narrative paragraphs for diagnosis and tables for prioritized fixes. Mark wh
 - Reporting an improvement as implemented when no manuscript edit was made.
 - Ignoring the experiments' narrative role.
 - Failing to explain why the central parameter, benchmark, or theorem should matter to readers.
+- Improving memorability by inventing an unsupported label for the paper's main idea or mechanism.
 
 ## Optional Full Example
 

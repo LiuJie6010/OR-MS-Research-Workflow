@@ -26,7 +26,7 @@ If the draft contains a formal result with no mechanism or failure mode, invoke 
 - Existing draft or outline.
 - Main result, benchmark, assumptions, and proof status.
 - Claimed managerial implication.
-- Existing notation, defined terms, and local style constraints, if any.
+- Existing notation, defined terms and their locations, terminology provenance, and local style constraints, if any.
 
 ## Procedure
 
@@ -38,7 +38,7 @@ If the draft contains a formal result with no mechanism or failure mode, invoke 
 6. Audit the managerial paragraph. Check whether each recommendation names the regime, mechanism, operational action, and failure mode. If not, use the managerial insights subroutine.
 7. Match claim status to proof status. Use theorem, proposition, corollary, example, discussion, or design lens according to what is actually proved.
 8. Preserve mathematical precision. Keep explicit constants, thresholds, asymptotic hypotheses, feasible sets, and benchmark definitions.
-9. Before changing notation or naming a concept, check existing manuscript usage. Keep one notation per object and one object per notation. Keep one term per concept unless the paper explicitly defines a replacement.
+9. Apply `terminology-discipline.md` before naming or renaming a technical concept. Use the manuscript-defined term first; otherwise use an identifiable literature term; otherwise use neutral descriptive wording. Keep any proposed new label in a terminology-decision note until the author approves it. Keep one term per concept and do not create stylistic synonyms.
 10. Enforce definition-before-use. Do not write any symbol, theorem label, assumption, model object, or technical concept until it has been defined in the manuscript up to that point. If the draft needs an object that is not yet defined, define it first, rewrite in plain language, or flag the gap explicitly.
 11. Use human prose. Avoid decorative openers, vague adjectives, overexcited novelty claims, em dashes, semicolons, and generic AI phrasing.
 12. Lock notation and terminology across introduction, model, body, appendix, figures, tables, and captions.
@@ -52,6 +52,7 @@ Return polished prose plus a short note with:
 - Benchmark visibility.
 - Theorem-to-insight quality.
 - Notation and terminology consistency risks.
+- Terminology provenance and any pending author decision.
 - Subroutine used, if any: theorem interpretation, managerial insights, or proof rigor.
 - Local style risks.
 
@@ -66,5 +67,6 @@ Return polished prose plus a short note with:
 - Making the introduction promise more than the body proves.
 - Treating theorem interpretation or managerial insight as isolated add-ons instead of part of the body narrative.
 - Introducing a fresh synonym, construct name, or symbol without checking whether the manuscript already defines one.
+- Calling a term standard without identifiable literature evidence, or silently adopting a proposed term before author approval.
 - Reusing an existing symbol for a different object, or assigning multiple symbols to the same object.
 - Using notation, theorem labels, assumptions, or concepts before they are defined.

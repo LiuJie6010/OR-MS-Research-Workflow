@@ -29,9 +29,21 @@ Use this skill when working on:
 - Durable taste updates from co-author comments, reviewer comments, diffs, or
   repeated writing revisions.
 
-The skill's central rule is simple: do not invent citations, results, theorem
-statements, proofs, experiments, or evidence. If something is missing, the skill
-should mark it explicitly and give conditional recommendations.
+The skill has two central evidence rules. First, do not invent citations,
+results, theorem statements, proofs, experiments, or evidence. If something is
+missing, mark it explicitly and give conditional recommendations. Second, treat
+technical terminology as provenance-controlled: use the current manuscript's
+formally defined term first, then an established term supported by identifiable
+literature, and otherwise neutral descriptive wording. Never introduce a new
+technical label silently.
+
+The terminology rule covers technical constructs, model objects, mechanisms,
+regimes, policies, metrics, algorithms, acronyms, and named results, but not
+ordinary prose. A genuinely new candidate term must be isolated in a terminology
+decision note with the manuscript and literature evidence checked, alternatives,
+and an author decision. Until approval, the manuscript and discussion continue
+with neutral descriptive wording. Manuscript terminology remains authoritative
+when the literature uses a synonym.
 
 ## How The Skill Works
 
@@ -39,6 +51,11 @@ should mark it explicitly and give conditional recommendations.
 `manifest.yaml`, then loads only the reference files needed for the user's
 specific task. This keeps the working context focused instead of loading every
 research guide at once.
+
+`references/terminology-discipline.md` is a required companion whenever a task
+uses, creates, revises, or audits technical terminology. Direct naming and
+terminology-provenance requests route to it, and genuinely new candidates use
+`assets/terminology-decision-template.md`.
 
 The top-level taste standard is a top-journal OM/OR register:
 
@@ -85,6 +102,7 @@ claims, evidence, and roadmap clear enough to write honestly.
 | `reviewer-critique` | Critiquing a section or full manuscript | Reviewer report with major concerns, rigor issues, managerial relevance, and revision priorities |
 | `pre-submission-review` | Final full-manuscript audit before submission | Section-by-section review log for grammar, terminology, technical rigor, exposition, and global consistency |
 | `revision-audit` | Learning from comments, diffs, revisions, or taste notes | Durable taste rules and suggested module updates |
+| `terminology-discipline` | Selecting, checking, or proposing technical terminology | Provenance record, neutral current wording, and explicit author decision when a new term is needed |
 
 ## Templates
 
@@ -95,6 +113,7 @@ The `assets/` folder provides reusable output structures:
 - `introduction-template.md`
 - `storyline-analysis-template.md`
 - `theorem-interpretation-template.md`
+- `terminology-decision-template.md`
 - `experiment-plan-template.md`
 - `pre-submission-review-template.md`
 - `reviewer-report-template.md`
@@ -175,6 +194,7 @@ theorems, experiments, and managerial implications make consistent claims.
 |   |-- rigor-and-consistency.md
 |   |-- storyline-analysis.md
 |   |-- taste-evolution.md
+|   |-- terminology-discipline.md
 |   |-- theorem-interpretation.md
 |   |-- introduction-samples/
 |   |   |-- annotated-dynamic-matching-introduction.tex
@@ -192,6 +212,7 @@ theorems, experiments, and managerial implications make consistent claims.
     |-- reviewer-report-template.md
     |-- revision-audit-template.md
     |-- storyline-analysis-template.md
+    |-- terminology-decision-template.md
     `-- theorem-interpretation-template.md
 ```
 
@@ -207,3 +228,5 @@ Before changing a module, ask whether the update captures a repeatable research
 principle: contribution framing, proof rigor, claim calibration,
 theorem-to-insight translation, experiment credibility, or managerial relevance.
 Keep project-specific terminology in the project, not in the general skill.
+An author-approved project term becomes a general terminology rule only when
+independent, identifiable literature supports that broader usage.

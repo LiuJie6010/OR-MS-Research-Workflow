@@ -21,7 +21,8 @@ Use this lightweight structure when drafting a Management Science-style introduc
 % (b) Keep [main decision objects/levers] visible throughout.
 % (c) Frame the paper as [new research question], not only an extension of [benchmark].
 % (d) Translate each structural result into managerial meaning before formal claims.
-% (e) Local style rules: [terminology locks, punctuation, citation style, emphasis rules].
+% (e) Terminology provenance: [manuscript-defined terms and locations; literature-supported terms and sources; pending author decisions].
+% (f) Local style rules: [terminology locks, punctuation, citation style, emphasis rules].
 % =============================================================================
 
 % --- PARAGRAPH 1: CONTEXT ---
@@ -103,6 +104,8 @@ Use this lightweight structure when drafting a Management Science-style introduc
 % Role split: P5 gives the managerial answer. The Contributions block carries
 % precise formal claims and evidence. Avoid duplication between them.
 %
+% Terminology check: [Every technical term is body-defined, literature-supported,
+% or neutral description; no pending candidate is used in the introduction.]
 % Style check: [terminology locks and local style rules].
 % =============================================================================
 ```

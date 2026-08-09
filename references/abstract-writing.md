@@ -28,6 +28,8 @@ For an MSOM abstract, place the setting, tension, and question in `Problem Defin
 
 ## Draft and Audit
 
+- Build a terminology inventory from the stable body before drafting. Preserve the manuscript-defined names for constructs, model objects, mechanisms, regimes, policies, metrics, algorithms, acronyms, and named results.
+- Do not debut a technical term or acronym in the abstract. If the body has no term, use an identifiable literature term or neutral descriptive wording under `terminology-discipline.md`. Keep any proposed new label outside the abstract in a terminology-decision note until the author approves it.
 - Preserve every material assumption, scope restriction, calibration condition, and theorem qualifier needed to keep a claim true.
 - Keep the benchmark visible. A guarantee or improvement is incomplete if the comparison basis is unclear.
 - Tie each numerical claim to its metric and baseline. Do not combine results from different settings as though they were directly comparable.
@@ -46,3 +48,4 @@ Return:
 3. The polished abstract.
 4. The word count and counting convention, if known.
 5. Concise claim-evidence warnings for unsupported, overstated, or underspecified statements.
+6. Concise terminology warnings for unsupported, conflicting, or newly proposed terms.

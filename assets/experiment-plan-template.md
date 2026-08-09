@@ -12,6 +12,10 @@ Validation, mechanism, robustness, benchmark comparison, or extension.
 
 ## Metrics
 
+## Terminology Locks
+
+Record the manuscript-defined names for parameters, instance classes, baselines, policies, metrics, algorithms, and regimes. Identify literature evidence for any term not defined in the manuscript; otherwise use neutral descriptive wording.
+
 ## Figures and Tables
 
 ## Sensitivity Checks

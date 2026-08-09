@@ -24,7 +24,8 @@ Use for full paper reviews, section reviews, mock referee reports, revision plan
 5. Separate fixable writing issues from substantive research risks.
 6. Check whether abstract/introduction promises are supported by body results.
 7. Check definition-before-use. Flag notation, theorem labels, assumptions, or concepts used before they are defined.
-8. Recommend revision priorities in order.
+8. Apply `terminology-discipline.md`. Flag unsupported, nonstandard, conflicting, or newly invented terminology and identify the relevant manuscript definition or literature evidence. Do not silently replace the author's term; make manuscript-literature conflicts and proposed renamings explicit author decisions.
+9. Recommend revision priorities in order.
 
 ## Expected Output
 
@@ -46,3 +47,4 @@ Return a reviewer report with:
 - Ignoring proof-status mismatch.
 - Treating lack of clarity and lack of contribution as the same issue.
 - Missing undefined notation, theorem labels, or concepts that hurt readability.
+- Silently normalizing terminology without evidence or author review.

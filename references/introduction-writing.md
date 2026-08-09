@@ -22,6 +22,11 @@ If the body is not yet stable, return a conditional outline and a body-informati
 - Main analytical answer and contribution list.
 - Actual body-section structure for the roadmap.
 - Any local style rules from the author, such as prohibited punctuation, emphasis commands, notation locks, or terminology locks.
+- The manuscript terminology ledger and definition locations for every technical concept the introduction must mention.
+
+## Terminology Checkpoint
+
+Apply `terminology-discipline.md` before drafting. Use the body's formally defined terms, even when the literature uses a synonym; mention the literature term only when positioning or reader clarity requires it. Do not debut an unsupported construct name, acronym, mechanism, policy, metric, algorithm, or result label in the introduction. Put any genuinely new candidate in a separate terminology-decision note and use neutral descriptive wording in the draft until the author approves it.
 
 ## Procedure
 
@@ -94,6 +99,7 @@ Return either a paragraph-by-paragraph outline or polished prose. Also provide a
 - Does every contribution have support in the body?
 - Does the roadmap match the manuscript's actual section labels and order?
 - Does the draft preserve the manuscript's established notation and terminology?
+- Is every technical term traceable to a manuscript definition, identifiable literature, or neutral descriptive wording, with no pending candidate silently adopted?
 - Do the annotations expose enough structure for a human coauthor to edit the logic without rewriting the prose from scratch?
 - Does every symbol, theorem label, assumption, and technical concept appear only after it is defined or immediately defined in the same passage?
 
@@ -110,6 +116,7 @@ Return either a paragraph-by-paragraph outline or polished prose. Also provide a
 - Letting P5 repeat theorem statements already reserved for the contribution block.
 - Writing a roadmap from memory rather than from the actual body sections.
 - Renaming a body construct or introducing a new label for a concept that already has an established manuscript term.
+- Debuting a technical term or acronym in the introduction before the body or literature supports it.
 - Referencing formal notation, theorem labels, or concepts before they are defined.
 
 ## Optional Full Examples

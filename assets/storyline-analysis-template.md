@@ -22,6 +22,14 @@ The narrative arc is: **[Practical Problem] -> [Core Tension] -> [Insight] -> [F
 
 [Overall assessment of whether the story is clear, distinctive, and memorable.]
 
+### Terminology Check
+
+| Concept Used in the Story | Manuscript Term and Definition | Literature Evidence if Needed | Wording Used | Status |
+|---|---|---|---|---|
+| [Concept] | [Term/location or none] | [Identifiable source or unverified] | [Preserved term or neutral description] | [Locked / author decision needed] |
+
+Do not improve memorability by introducing an unsupported nickname, acronym, mechanism, policy, algorithm, or result label.
+
 ---
 
 ## 2. Section-by-Section Analysis
