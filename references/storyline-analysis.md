@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Analyze whether an OM/OR paper has a clear, intriguing, and convincing storyline before the final rigor and consistency check. Focus on narrative logic, reader motivation, intellectual arc, insight clarity, section-to-section transitions, and Management Science positioning. Do not treat this as a grammar pass or proof audit, although story gaps may involve technical narrative issues.
+Analyze whether an OM/OR paper has a clear, intriguing, and convincing storyline. Focus on narrative logic, reader motivation, intellectual arc, insight clarity, section-to-section transitions, and Management Science positioning. Do not treat this as a grammar pass or proof audit, although story gaps may involve technical narrative issues.
 
 ## When to Use
 
-Use before pre-submission rigor review, when the user asks whether the paper is compelling, convincing, attractive to readers, coherent as a story, or likely to hook an editor/referee at first glance.
+Use when the user asks whether the paper is compelling, convincing, coherent as a story, or likely to interest an editor or referee. This may precede a rigor audit but is not a prerequisite for one.
 
 ## Inputs Needed
 
@@ -27,16 +27,16 @@ Keep these separate. In storyline analysis, flag technical issues only when they
 
 ## Procedure
 
-Apply `terminology-discipline.md` while summarizing the story. Preserve manuscript-defined names when technical specificity is necessary, but use neutral descriptive prose when removing jargon. Do not create a memorable nickname for the main idea, mechanism, policy, algorithm, or result. Put any genuinely useful candidate name in a separate terminology-decision note and leave it out of the storyline report until approval.
+Preserve manuscript-defined names and use neutral prose when removing jargon. Use [terminology discipline](terminology-discipline.md) for naming or provenance concerns.
 
-1. Identify the big-picture story in one quoted paragraph. It should be memorable enough that a referee could repeat it.
+1. Summarize the big-picture story in a concise paragraph. Label it as your synthesis rather than presenting it as a quotation from the paper.
 2. Extract the narrative arc as a compact chain, such as `Practical Problem -> Structural Insight -> Algorithm -> Guarantee -> Experiments -> Managerial Meaning`.
 3. Diagnose whether the paper has a strong first-glance hook. Check whether the abstract and introduction quickly reveal the decision problem, stakes, trade-off, and main insight.
 4. Review section by section. For each section, state the narrative function, what works, and where the logical connection could be tighter.
 5. Identify structural observations across sections. Look for multiple analytical "acts," missing bridges, delayed motivation, abrupt parameters, unsupported positioning, or experiments that feel detached from the theory.
 6. Separate concerns into priorities. Use Priority 1 for gaps that weaken the main storyline, Priority 2 for technical-narrative depth, Priority 3 for audience positioning and exposition, and Priority 4 for optional refinements.
 7. Produce an improvement plan with location-specific fixes. Each item should name the gap, the location, and the suggested fix.
-8. If the user asks to implement fixes, add an implementation log after changes. Do not claim an item is done unless the manuscript was actually edited or the user explicitly accepted the revision.
+8. If the user asks to implement fixes, apply authorized changes and record them. Mark an item done only after the edit was applied and checked; record accepted but unapplied suggestions separately.
 
 ## What to Check
 
@@ -45,7 +45,7 @@ Apply `terminology-discipline.md` while summarizing the story. Preserve manuscri
 - **Problem-to-insight bridge**: Does the paper explain why the central insight solves the stated problem?
 - **Insight-to-method bridge**: Does the paper explain how the insight becomes a model, theorem, algorithm, experiment, or prescription?
 - **Theory-to-practice bridge**: Does the paper explain what formal results mean for the decision maker?
-- **Benchmark positioning**: Is the paper framed as a meaningful new question rather than a small extension?
+- **Benchmark positioning**: Does the framing accurately explain what the paper adds to its closest benchmark without inflating an extension into a new question?
 - **Audience fit**: Does the paper lead with managerial and economic intuition before technical machinery when targeting Management Science?
 - **Tension management**: If the paper has multiple analytical regimes, such as stochastic motivation and adversarial guarantee, are their roles explicitly distinguished?
 - **Experiment role**: Do numerical or empirical sections validate the main principle, quantify value, explore mechanisms, or demonstrate robustness? Is that role stated clearly?
@@ -53,7 +53,7 @@ Apply `terminology-discipline.md` while summarizing the story. Preserve manuscri
 
 ## Expected Output
 
-Return a storyline analysis report with:
+For a full storyline analysis, a useful report structure is:
 
 1. Big Picture Story.
 2. Section-by-Section Analysis.
@@ -62,7 +62,7 @@ Return a storyline analysis report with:
 5. Summary.
 6. Implementation Log, only if fixes were actually made.
 
-Use narrative paragraphs for diagnosis and tables for prioritized fixes. Mark whether each concern is about story logic, technical narrative, audience positioning, or exposition.
+Use narrative paragraphs for diagnosis and tables when they clarify prioritized fixes. For a narrow request, return only the relevant diagnosis and proposed revision. Mark whether material concerns involve story logic, technical narrative, audience positioning, or exposition.
 
 ## Quality Bar
 
@@ -85,4 +85,4 @@ Use narrative paragraphs for diagnosis and tables for prioritized fixes. Mark wh
 
 ## Optional Full Example
 
-If the user asks for the author's storyline-analysis style, load `references/storyline-samples/storyline-analysis-report.md`. Use it as a report-architecture example, not as reusable findings.
+If the user asks for the author's storyline-analysis style, load [the sample report](storyline-samples/storyline-analysis-report.md). Use it as a report-architecture example, not as reusable findings.

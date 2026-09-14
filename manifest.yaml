@@ -1,236 +1,118 @@
+# Route index for SKILL.md. Select by requested deliverable, not keyword alone.
+# references: primary reads. subroutines: load only when their condition applies.
+# assets: optional output structures; use terminology-decision only for new names.
 required_companions:
   terminology-discipline:
     when:
-      - technical terminology is used or revised
-      - a construct, mechanism, regime, policy, metric, algorithm, acronym, or result is named
-      - terminology provenance or consistency is audited
-    references:
-      - references/terminology-discipline.md
-    assets:
-      - assets/terminology-decision-template.md
+      - naming or renaming a technical concept
+      - resolving conflicting or unsupported technical terminology
+      - auditing terminology provenance or consistency
+    references: [references/terminology-discipline.md]
+    assets: [assets/terminology-decision-template.md]
 
 routes:
   terminology-discipline:
-    triggers:
-      - terminology
-      - technical term
-      - construct name
-      - name this construct
-      - naming convention
-      - acronym
-      - term provenance
-      - terminology evidence
-      - proposed new term
-      - coin a term
-    references:
-      - references/terminology-discipline.md
-    assets:
-      - assets/terminology-decision-template.md
+    triggers: [terminology provenance, construct naming, acronym choice, proposed new term]
+    references: [references/terminology-discipline.md]
+    assets: [assets/terminology-decision-template.md]
 
   literature-reading:
-    triggers:
-      - paper
-      - pdf
-      - literature
-      - summarize
-      - read a paper
-      - how to read
-      - model abstraction
-      - core trade-off
-      - published
-      - top journal
-    references:
-      - references/literature-reading.md
-    assets:
-      - assets/literature-note-template.md
+    triggers: [paper summary, literature note, model abstraction analysis, paper reading]
+    references: [references/literature-reading.md]
+    assets: [assets/literature-note-template.md]
 
   research-brainstorming:
-    triggers:
-      - vague idea
-      - brainstorm
-      - research question
-      - topic
-      - mechanism
-    references:
-      - references/research-brainstorming.md
-    assets:
-      - assets/research-plan-template.md
+    triggers: [research brainstorming, vague research idea, research question development]
+    references: [references/research-brainstorming.md]
+    assets: [assets/research-plan-template.md]
 
   feasibility-check:
-    triggers:
-      - feasible
-      - tractable
-      - can become a paper
-      - model idea
-      - project potential
-    references:
-      - references/feasibility-check.md
-      - references/rigor-and-consistency.md
-    assets:
-      - assets/research-plan-template.md
+    triggers: [idea feasibility, model tractability, project potential]
+    references: [references/feasibility-check.md]
+    assets: [assets/research-plan-template.md]
 
   abstract-writing:
-    triggers:
-      - abstract
-      - abstract revision
-      - structured abstract
-      - journal abstract
-      - MSOM abstract
-      - abstract word limit
-    references:
-      - references/abstract-writing.md
+    triggers: [abstract drafting, abstract revision, structured abstract, abstract word limit]
+    references: [references/abstract-writing.md]
 
   management-science-writing:
-    triggers:
-      - write
-      - rewrite
-      - body
-      - main body
-      - result narrative
-      - conclusion
-      - appendix
-      - management science style
-    references:
-      - references/management-science-writing.md
+    triggers: [body prose, result narrative, conclusion writing, appendix writing, paper style revision]
+    references: [references/management-science-writing.md]
     subroutines:
       theorem-interpretation:
-        when:
-          - formal result needs interpretation
-          - theorem has no mechanism
-          - structural property needs economic meaning
-          - result narrative needs failure mode
-        references:
-          - references/theorem-interpretation.md
-          - references/proof-rigor.md
-        assets:
-          - assets/theorem-interpretation-template.md
+        when: [a result needs a mechanism or economic interpretation]
+        references: [references/theorem-interpretation.md]
+        assets: [assets/theorem-interpretation-template.md]
       managerial-insights:
-        when:
-          - result needs managerial implication
-          - practical recommendation lacks supported action
-          - post-result discussion needs regime mechanism action failure mode
-        references:
-          - references/managerial-insights.md
+        when: [a result needs an evidence-supported operational implication]
+        references: [references/managerial-insights.md]
+      proof-rigor:
+        when: [claim validity or proof obligations need checking]
+        references: [references/proof-rigor.md]
 
   introduction-writing:
-    triggers:
-      - introduction
-      - intro
-      - annotated introduction
-      - structured annotation
-      - contributions
-      - roadmap
-      - after body
-    references:
-      - references/management-science-writing.md
-      - references/introduction-writing.md
-    assets:
-      - assets/introduction-template.md
+    triggers: [introduction drafting, introduction revision, contribution block, paper roadmap]
+    references: [references/introduction-writing.md]
+    assets: [assets/introduction-template.md]
 
   storyline-analysis:
-    triggers:
-      - storyline
-      - storyline analysis
-      - narrative arc
-      - paper story
-      - story logic
-      - compelling story
-      - first-glance hook
-      - insight analysis
-      - before submission
-    references:
-      - references/management-science-writing.md
-      - references/storyline-analysis.md
-      - references/theorem-interpretation.md
-      - references/managerial-insights.md
-    assets:
-      - assets/storyline-analysis-template.md
+    triggers: [storyline analysis, narrative arc, paper story, insight logic]
+    references: [references/storyline-analysis.md]
+    assets: [assets/storyline-analysis-template.md]
+    subroutines:
+      theorem-interpretation:
+        when: [the result-to-insight bridge needs analysis]
+        references: [references/theorem-interpretation.md]
+      managerial-insights:
+        when: [the story depends on a managerial recommendation]
+        references: [references/managerial-insights.md]
 
   theorem-and-proof:
-    triggers:
-      - theorem
-      - proposition
-      - lemma
-      - corollary
-      - proof
-      - constant
-    references:
-      - references/theorem-interpretation.md
-      - references/proof-rigor.md
-    assets:
-      - assets/theorem-interpretation-template.md
+    triggers: [theorem interpretation, proof review, theorem statement, proof development]
+    subroutines:
+      theorem-interpretation:
+        when: [the user requests interpretation or result narrative]
+        references: [references/theorem-interpretation.md]
+        assets: [assets/theorem-interpretation-template.md]
+      proof-rigor:
+        when: [the user requests formal development or review, or validity is uncertain]
+        references: [references/proof-rigor.md]
 
   experiment-design:
-    triggers:
-      - experiment
-      - numerical
-      - simulation
-      - robustness
-      - figure
-      - table
-      - plot
-    references:
-      - references/experiment-design.md
-    assets:
-      - assets/experiment-plan-template.md
+    triggers: [experiment plan, simulation design, numerical section, robustness study]
+    references: [references/experiment-design.md]
+    assets: [assets/experiment-plan-template.md]
 
   managerial-insights:
-    triggers:
-      - managerial insight
-      - implication
-      - interpretation
-      - mechanism
-      - trade-off
-    references:
-      - references/management-science-writing.md
-      - references/managerial-insights.md
-      - references/theorem-interpretation.md
-    parent:
-      - management-science-writing
+    triggers: [managerial implication, operational recommendation, post-result discussion]
+    references: [references/managerial-insights.md]
+    subroutines:
+      theorem-interpretation:
+        when: [the supporting formal result needs interpretation]
+        references: [references/theorem-interpretation.md]
 
   reviewer-critique:
-    triggers:
-      - review
-      - critique
-      - referee
-      - reviewer
-      - weakness
-      - major concern
-    references:
-      - references/reviewer-critique.md
-      - references/rigor-and-consistency.md
-    assets:
-      - assets/reviewer-report-template.md
+    triggers: [referee report, reviewer critique, manuscript weaknesses, section review]
+    references: [references/reviewer-critique.md]
+    assets: [assets/reviewer-report-template.md]
+    subroutines:
+      rigor-and-consistency:
+        when: [the request includes cross-section claim and evidence checks]
+        references: [references/rigor-and-consistency.md]
 
   pre-submission-review:
-    triggers:
-      - pre-submission
-      - final polish
-      - submission readiness
-      - full manuscript check
-      - consistency sweep
-      - rigor check
-      - notation consistency
-      - terminology consistency
-    references:
-      - references/management-science-writing.md
-      - references/rigor-and-consistency.md
-      - references/proof-rigor.md
-      - references/experiment-design.md
-    assets:
-      - assets/pre-submission-review-template.md
+    triggers: [pre-submission audit, full manuscript check, submission readiness, consistency audit]
+    references: [references/rigor-and-consistency.md]
+    assets: [assets/pre-submission-review-template.md]
+    subroutines:
+      proof-rigor:
+        when: [the manuscript contains formal claims and proofs]
+        references: [references/proof-rigor.md]
+      experiment-design:
+        when: [the manuscript contains numerical or empirical claims]
+        references: [references/experiment-design.md]
 
   revision-audit:
-    triggers:
-      - revision
-      - resubmission
-      - co-author comment
-      - reviewer comment
-      - diff
-      - commit
-      - taste data
-    references:
-      - references/taste-evolution.md
-      - references/management-science-writing.md
-    assets:
-      - assets/revision-audit-template.md
+    triggers: [revision history analysis, reviewer comment analysis, research taste distillation, skill improvement]
+    references: [references/taste-evolution.md]
+    assets: [assets/revision-audit-template.md]

@@ -16,7 +16,7 @@ Use when the user provides a paper, PDF text, abstract, introduction, notes, or 
 
 ## Procedure
 
-Use a model-first pass before reading linearly.
+For a substantive reading note on a model-based paper, a model-first pass is useful. Adapt the lens to the paper and the user's question; a brief summary does not require a full decomposition, extension plan, or proof audit.
 
 1. **Model abstraction.** Ask what world the paper constructs. Identify variables, state/action spaces, decision maker, constraints, objective, information structure, timing, and uncertainty. Compress the paper into one optimization, equilibrium, stochastic-control, empirical, or design problem.
 2. **Solution architecture.** Ask how the model is solved. Classify whether the paper uses closed-form first-order conditions, equilibrium characterization, dynamic programming, fluid/mean-field approximation, online algorithm, structural theorem, relaxation, numerical optimization, simulation, empirical identification, or pure numerical evidence. The goal is to know the solving route, not to reproduce every calculation.
@@ -26,7 +26,7 @@ Use a model-first pass before reading linearly.
 
 After the model-first pass:
 
-6. Build a source-terminology record under `terminology-discipline.md`. Preserve the paper's exact terms for constructs, model objects, mechanisms, regimes, policies, metrics, algorithms, acronyms, and named results; identify where each term is defined when available. Mark any plain-language explanation as descriptive paraphrase rather than source terminology.
+6. Preserve source terms and distinguish them from descriptive paraphrase. Record definitions when needed to explain a key concept; use [terminology discipline](terminology-discipline.md) for disputed usage or provenance questions.
 7. State the paper's core research question.
 8. Classify contribution type: new model, new setting, structural theorem, algorithm, empirical evidence, design prescription, robustness, or synthesis.
 9. Explain why the paper could be publishable: importance, novelty, rigor, evidence, clarity, and positioning.
@@ -36,7 +36,7 @@ After the model-first pass:
 
 ## Five Reading Questions
 
-Ask these explicitly in a literature note:
+Use these as lenses for a full literature note, reporting only those relevant to the request:
 
 1. **How does the paper model reality?** What variables, decision maker, constraints, objective, timing, and uncertainty compress the real setting into a formal problem?
 2. **How does it solve the model?** What analytical or numerical route makes the result possible?
@@ -64,7 +64,7 @@ Use the literature note template when useful:
 ## Common Failure Modes
 
 - Summarizing section by section without identifying contribution logic.
-- Reading introduction to conclusion without first extracting the model and trade-off.
+- Missing the model and trade-off in a substantive analysis of a model-based paper.
 - Describing the application context while missing the optimization problem beneath it.
 - Listing results without explaining what trade-off creates them.
 - Treating every technical novelty as a managerial contribution.

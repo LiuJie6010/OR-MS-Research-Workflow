@@ -19,11 +19,11 @@ Use when the user has an ambiguous idea, observed phenomenon, industry setting, 
 
 1. Restate the idea as a managerial tension.
 2. Identify decision maker, actions, uncertainty, constraints, information, and objective.
-3. Generate two to four research-question candidates.
+3. Generate a small set of research-question candidates, or develop the single direction the user specifies.
 4. For each candidate, propose a minimum model and a possible contribution.
 5. Identify closest-risk literature categories without inventing specific citations.
 6. Score each candidate on importance, novelty risk, tractability, evidence path, and journal fit.
-7. Apply `terminology-discipline.md`. Reuse manuscript-defined terms, then identifiable literature terms. Otherwise describe candidate constructs and mechanisms neutrally. Propose a new name only through the terminology-decision protocol, keep it out of the working discussion and draft while pending, and ask the author to approve, reject, or revise it.
+7. Describe candidate mechanisms neutrally. Use [terminology discipline](terminology-discipline.md) if proposing names or resolving terminology; do not let a naming decision block model development.
 8. Recommend the next validation step, not a full paper.
 
 ## Expected Output

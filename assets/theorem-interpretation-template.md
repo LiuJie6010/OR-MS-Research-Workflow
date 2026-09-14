@@ -1,5 +1,7 @@
 # Theorem Interpretation Template
 
+Use only the sections relevant to the requested result. Include the provenance table when terminology needs attention.
+
 ## Terminology Provenance
 
 | Concept | Manuscript Term and Definition | Literature Evidence if Needed | Wording Used | Status |
@@ -24,7 +26,7 @@ What the manager can decide, monitor, precompute, or avoid.
 
 ## Failure Mode
 
-What happens if the conditions fail.
+What is known outside the conditions, or where the guarantee stops applying. Do not infer failure solely from an unmet sufficient condition.
 
 ## Claim-Status Check
 

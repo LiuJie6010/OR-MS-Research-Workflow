@@ -1,72 +1,39 @@
 # Management Science Writing
 
-## Purpose
+## Scope
 
-Revise OM/OR main-body prose so formal rigor serves a clear managerial story. Use this as the parent writing workflow for Management Science, Operations Research, Manufacturing & Service Operations Management, Production and Operations Management, and similar outlets.
+Revise OM/OR main-body prose, result narratives, conclusions, and appendices so formal rigor supports a clear managerial story. Use [abstract writing](abstract-writing.md) or [introduction writing](introduction-writing.md) for those deliverables.
 
-## When to Use
+Work from the supplied section, audience, results, benchmarks, assumptions, proof status, and local style constraints. Preserve the shared research invariants in [SKILL.md](../SKILL.md); report only material missing context.
 
-Use for main body sections, theory sections, result interpretation, design sections, conclusions, appendices, abstract drafting after the body is clear, and paper-level style calibration.
+## Writing Decisions
 
-Do not use this file as the full introduction architecture. For introductions, load `introduction-writing.md` after the body, contribution list, and roadmap are reasonably stable.
+- Make the managerial or economic question visible and explain the trade-off behind the central result.
+- State what the result improves, matches, relaxes, or diagnoses relative to its benchmark.
+- Explain the operational meaning of structural properties such as monotonicity, convexity, sparsity, or connectivity when relevant to the paragraph.
+- Distinguish theorem-level guarantees from informal interpretation, proxies, diagnostics, and design suggestions. A rigorously proved bound is still a formal result; an unproved prescription based on it is not.
+- Preserve constants, thresholds, asymptotic hypotheses, feasible sets, and comparison definitions.
+- Check affected terminology and notation. Load [terminology discipline](terminology-discipline.md) for naming, conflicts, or provenance questions; preserve routine defined terms without repeating its full protocol.
+- Use concise academic prose and concrete verbs. Avoid decorative novelty claims and vague praise. By default, avoid em dashes and semicolons in manuscript prose; follow explicit author style requests. Annotation and punctuation preferences are not approval gates.
 
-## Integrated Subroutines
+## Conditional Supporting Guides
 
-This file controls the overall body-writing taste. Load the specialized files only when the local writing problem needs their structure:
+Load only when the local problem requires more detail:
 
-- Load `theorem-interpretation.md` when a theorem, proposition, lemma, corollary, example, structural result, bound, or numerical result needs interpretation. Use it to turn formal content into mathematical content, mechanism, economic meaning, managerial implication, and failure mode.
-- Load `managerial-insights.md` when a paragraph must become an evidence-tied managerial implication or operational recommendation. Use it to check regime, mechanism, action, and failure mode.
-- Load `proof-rigor.md` when the paragraph's claim status depends on assumptions, constants, proof obligations, boundary cases, or whether the result is theorem-level versus design-lens prose.
+- [Theorem interpretation](theorem-interpretation.md): mathematical content, mechanism, economic meaning, and supported implications of a result.
+- [Managerial insights](managerial-insights.md): evidence for a recommendation, its regime, operational action, and limits.
+- [Proof rigor](proof-rigor.md): uncertain validity, assumptions, constants, proof obligations, or boundary cases.
 
-If the draft contains a formal result with no mechanism or failure mode, invoke theorem interpretation. If the draft contains a practical recommendation with no supported action or regime, invoke managerial insights. If both are missing, invoke both subroutines before polishing the prose.
+These are diagnostic lenses, not compulsory sections after every lemma. Explain a guarantee's scope without inventing a failure outside it, and do not add a managerial action that the result does not support.
 
-## Inputs Needed
+## Output
 
-- Target section and audience.
-- Existing draft or outline.
-- Main result, benchmark, assumptions, and proof status.
-- Claimed managerial implication.
-- Existing notation, defined terms and their locations, terminology provenance, and local style constraints, if any.
-
-## Procedure
-
-1. Start from the managerial problem. State the economic question before the technique.
-2. Keep the benchmark visible. Say what the result improves, matches, relaxes, or diagnoses.
-3. Make the trade-off explicit. Good OM/OR writing shows tension, not only improvement.
-4. Translate structure into value. For structural properties such as monotonicity, convexity, sparsity, connectivity, or overlap, explain operational meaning.
-5. Audit the local result narrative. After each theorem or finding, check whether the prose explains what it says, why it happens, why a manager should care, and what fails if assumptions fail. If not, use the theorem interpretation subroutine.
-6. Audit the managerial paragraph. Check whether each recommendation names the regime, mechanism, operational action, and failure mode. If not, use the managerial insights subroutine.
-7. Match claim status to proof status. Use theorem, proposition, corollary, example, discussion, or design lens according to what is actually proved.
-8. Preserve mathematical precision. Keep explicit constants, thresholds, asymptotic hypotheses, feasible sets, and benchmark definitions.
-9. Apply `terminology-discipline.md` before naming or renaming a technical concept. Use the manuscript-defined term first; otherwise use an identifiable literature term; otherwise use neutral descriptive wording. Keep any proposed new label in a terminology-decision note until the author approves it. Keep one term per concept and do not create stylistic synonyms.
-10. Enforce definition-before-use. Do not write any symbol, theorem label, assumption, model object, or technical concept until it has been defined in the manuscript up to that point. If the draft needs an object that is not yet defined, define it first, rewrite in plain language, or flag the gap explicitly.
-11. Use human prose. Avoid decorative openers, vague adjectives, overexcited novelty claims, em dashes, semicolons, and generic AI phrasing.
-12. Lock notation and terminology across introduction, model, body, appendix, figures, tables, and captions.
-
-## Expected Output
-
-Return polished prose plus a short note with:
-
-- Claim calibration.
-- Missing evidence or missing assumptions.
-- Benchmark visibility.
-- Theorem-to-insight quality.
-- Notation and terminology consistency risks.
-- Terminology provenance and any pending author decision.
-- Subroutine used, if any: theorem interpretation, managerial insights, or proof rigor.
-- Local style risks.
+Return the requested polished prose. Separately note material claim calibration, missing evidence, or notation and terminology decisions. Include a broader audit or detailed explanation only when requested or needed to understand a substantive change.
 
 ## Common Failure Modes
 
-- Starting from the model technique instead of the managerial question.
-- Adding managerial implications only at the end.
-- Saying "optimal" without a formal feasible set.
+- Saying "optimal" without a feasible set or benchmark.
 - Saying "same savings" when only same-order savings are proved.
-- Treating a design lens as a theorem.
-- Hiding the benchmark.
-- Making the introduction promise more than the body proves.
-- Treating theorem interpretation or managerial insight as isolated add-ons instead of part of the body narrative.
-- Introducing a fresh synonym, construct name, or symbol without checking whether the manuscript already defines one.
-- Calling a term standard without identifiable literature evidence, or silently adopting a proposed term before author approval.
-- Reusing an existing symbol for a different object, or assigning multiple symbols to the same object.
-- Using notation, theorem labels, assumptions, or concepts before they are defined.
+- Presenting a design suggestion as a proved guarantee.
+- Making the introduction promise more than the body supports.
+- Renaming a defined object for stylistic variety or changing its meaning during polish.

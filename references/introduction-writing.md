@@ -1,129 +1,41 @@
 # Introduction Writing
 
-## Purpose
+## Scope and Inputs
 
-Build a Management Science-style introduction that sells the research question to a busy editor while preserving the formal contribution. Use structured annotations as the collaboration layer between the human author and Codex: every paragraph should reveal its role, internal logic, big-picture function, and connection to the next paragraph before or beside the prose.
+Draft, revise, or critique an introduction, contribution block, or roadmap. Use the setting, decision levers, central trade-off, closest prior work, research question, supported results, and actual section structure. A stable body is the best source, but it is not a prerequisite for requested drafting: produce provisional prose or an outline as requested, with unsupported claims and missing evidence identified separately.
 
-Treat introduction writing as a late-stage paper-writing module. The best introduction is usually written after the main body, formal results, numerical evidence, contribution list, and section roadmap are stable enough to reveal what the paper actually proves.
+Preserve body terminology and the author's notation and style choices. Explain technical concepts before relying on them; use plain-language previews or resolvable forward references where appropriate. Naming or provenance problems use [terminology discipline](terminology-discipline.md).
 
-## When to Use
+## Narrative Architecture
 
-Use when drafting, revising, or critiquing an introduction, contribution block, abstract-adjacent overview, or paper roadmap.
+For a full introduction, use this architecture when it fits the paper. Adapt the order, paragraph count, and contribution format to the user's draft and request; local revisions need only the affected part.
 
-If the body is not yet stable, return a conditional outline and a body-information checklist rather than pretending the final contribution storyline is known.
+1. **Context.** Establish the practitioner setting, decision maker, and relevant levers.
+2. **Trade-off.** Use a grounded example to explain competing forces. Label illustrative numbers and do not present them as observed data.
+3. **Difficulty.** Explain the uncertainty, coupling, information limits, or computational obstacle supported by the paper. Give enough motivation for the reader to understand the answer.
+4. **Research question.** Position the question against identifiable prior work and its assumptions. Frame a distinct question only when supported; an extension can be described honestly as an extension.
+5. **Managerial answer.** State the supported decision meaning in plain language, without repeating the formal contribution list.
+6. **Contributions.** Use specific contribution verbs and as many distinct items as the body supports. Model, structural result, prescription, and evidence are possible categories, not a four-item quota.
+7. **Roadmap.** Match actual section order and labels. Do not invent a finalized structure when it remains provisional.
 
-## Inputs Needed
+## Annotated Collaboration Mode
 
-- Real-world setting and decision maker.
-- Decision objects or levers studied in the paper.
-- Central trade-off with a grounded example.
-- Closest prior work and restrictive assumptions.
-- Research question.
-- Main analytical answer and contribution list.
-- Actual body-section structure for the roadmap.
-- Any local style rules from the author, such as prohibited punctuation, emphasis commands, notation locks, or terminology locks.
-- The manuscript terminology ledger and definition locations for every technical concept the introduction must mention.
+When the user requests an annotated introduction or the author's example style, use [the introduction template](../assets/introduction-template.md). Preserve:
 
-## Terminology Checkpoint
+- Overall logic flow and design principles.
+- Paragraph comments with Role, Internal Logic, Big Picture, and Connection to Next where useful.
+- Contribution-item comments explaining their body-supported claims.
+- A concise structure summary.
 
-Apply `terminology-discipline.md` before drafting. Use the body's formally defined terms, even when the literature uses a synonym; mention the literature term only when positioning or reader clarity requires it. Do not debut an unsupported construct name, acronym, mechanism, policy, metric, algorithm, or result label in the introduction. Put any genuinely new candidate in a separate terminology-decision note and use neutral descriptive wording in the draft until the author approves it.
+For ordinary clean-prose requests, omit annotation scaffolding. Full LaTeX examples are available when their structure is needed:
 
-## Procedure
+- [Dynamic matching](introduction-samples/annotated-dynamic-matching-introduction.tex).
+- [Opaque selling](introduction-samples/annotated-opaque-selling-introduction.tex).
 
-Use this annotated narrative architecture:
+Samples illustrate architecture and annotation, not reusable prose or verified evidence for the current paper.
 
-1. Overall logic flow. Before drafting prose, write a compact map for P1 through the roadmap. Each line should state the paragraph role and the one-sentence content promise.
-2. Design principles. Record the introduction-specific writing choices: what to lead with, what must stay visible, how the paper differs from the closest benchmark, how technical claims should be translated, and local style rules. Enforce definition-before-use: do not invoke formal notation, theorem labels, or technical concepts until they are defined in the manuscript or immediately defined in the same passage.
-3. P1 Context. Open with the practitioner-facing setting. End by naming every decision object or lever the paper studies.
-4. P2 Trade-off. Use one grounded example, preferably with numbers or concrete operational stakes, to show both extremes and why neither is enough. If the paper has multiple levers, show how each can forfeit the benefit when misaligned.
-5. P3 Difficulty. Explain why the problem is hard on its own terms. Do not preview the answer here. Name uncertainty, non-stationarity, combinatorial explosion, coupling across decisions, information constraints, or computational barriers only when supported by the paper.
-6. P4 Research question. Name the closest prior work, state what it assumes and proves, identify the restrictive assumption, and frame the paper as answering a different question when warranted. End with one clean research question.
-7. P5 Managerial answer. Answer the research question at a plain-language level. Say what the paper means for practice before saying what it proves. Keep this block non-overlapping with the formal contribution list.
-8. Contributions block. Use a numbered list with specific contribution verbs. Use four items when possible: model or representation, main structural theorem and robustness, optimization or prescription, numerical or empirical evidence. Add or remove items only when the body truly supports it.
-9. Roadmap. Use one sentence per section and align labels with the actual manuscript.
-10. Structure summary. After the draft, include a concise summary with paragraph roles, approximate lengths, the P5-versus-contributions split, and notation, terminology, or style locks.
+## Output and Promise Check
 
-## Annotation Protocol
+Deliver the requested outline, draft, or critique. Check that the decision and trade-off are clear, novelty is accurately positioned, contribution claims have support, the managerial answer adds meaning, and the roadmap matches the manuscript. Report material gaps separately; include paragraph roles or a detailed promise audit only when useful or requested.
 
-When drafting or revising an introduction in LaTeX, use comments like the author's examples. Keep them concise enough to be useful but detailed enough that the human can inspect and redirect the logic.
-
-For the header:
-
-```tex
-% =============================================================================
-% OVERALL LOGIC FLOW
-% P1 (Context):     ...
-% P2 (Trade-off):   ...
-% P3 (Difficulty):  ...
-% P4 (Research Q):  ...
-% P5 (Answer):      ...
-% Contributions:    ...
-% P6 (Roadmap):     ...
-%
-% DESIGN PRINCIPLES
-% (a) ...
-% (b) ...
-% =============================================================================
-```
-
-For each paragraph:
-
-```tex
-% --- PARAGRAPH 2: TRADE-OFF ---
-% Role: ...
-% Internal Logic: ...
-% Big Picture: ...
-% Connection to Next: ...
-```
-
-For contribution items:
-
-```tex
-% --- CONTRIBUTION 2 ---
-% Role: ...
-% Selling points: ...
-\item {\bf Precise contribution label.}
-...
-```
-
-Use `Role` to state what job the paragraph performs, `Internal Logic` to list the sentence-level progression, `Big Picture` to explain why the paragraph matters for the editor, and `Connection to Next` when the transition is non-obvious. In contribution comments, use `Selling points` for body-supported formal claims, not aspirations.
-
-## Expected Output
-
-Return either a paragraph-by-paragraph outline or polished prose. Also provide a promise audit:
-
-- Are all decision variables introduced early?
-- Does P2 show the trade-off?
-- Does P4 frame a new question instead of a small extension?
-- Does P5 avoid duplicating the formal contributions?
-- Does every contribution have support in the body?
-- Does the roadmap match the manuscript's actual section labels and order?
-- Does the draft preserve the manuscript's established notation and terminology?
-- Is every technical term traceable to a manuscript definition, identifiable literature, or neutral descriptive wording, with no pending candidate silently adopted?
-- Do the annotations expose enough structure for a human coauthor to edit the logic without rewriting the prose from scratch?
-- Does every symbol, theorem label, assumption, and technical concept appear only after it is defined or immediately defined in the same passage?
-
-## Common Failure Modes
-
-- Opening with technical definitions.
-- Introducing a decision variable only in the contribution block.
-- Saying "we extend" when the paper can be framed as a new research question.
-- Previewing the answer before explaining the difficulty.
-- Mixing the managerial answer and theorem-level contribution.
-- Using contribution verbs such as "explore" or "discuss" when the paper proves or characterizes.
-- Letting paragraph annotations become generic labels rather than a real logic map.
-- Treating the closest paper as a small extension target when the introduction can frame a distinct research question.
-- Letting P5 repeat theorem statements already reserved for the contribution block.
-- Writing a roadmap from memory rather than from the actual body sections.
-- Renaming a body construct or introducing a new label for a concept that already has an established manuscript term.
-- Debuting a technical term or acronym in the introduction before the body or literature supports it.
-- Referencing formal notation, theorem labels, or concepts before they are defined.
-
-## Optional Full Examples
-
-If the user asks for imitation of the author's annotated introduction style, load one or both full LaTeX samples:
-
-- `references/introduction-samples/annotated-dynamic-matching-introduction.tex`
-- `references/introduction-samples/annotated-opaque-selling-introduction.tex`
-
-Use these as structural examples, not as reusable prose. Preserve the user's annotation style: overall logic flow, design principles, paragraph-level comments, contribution-item comments, and final structure summary.
+Do not inflate novelty, copy sample claims, or make the introduction depend on unexplained notation. Preserve the distinction between preliminary claims and established results.

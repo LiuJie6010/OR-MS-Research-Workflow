@@ -1,6 +1,6 @@
 # Storyline Analysis Template
 
-Use this template before pre-submission rigor review to evaluate whether the paper's story is clear, intriguing, and convincing.
+Use for a full storyline analysis, adapting sections to the request. Storyline analysis is not a prerequisite for a rigor review. Include the terminology table only when terminology needs attention.
 
 ```markdown
 # Storyline, Logic, and Insight Analysis
@@ -14,7 +14,7 @@ Use this template before pre-submission rigor review to evaluate whether the pap
 
 ## 1. The Big Picture Story
 
-The paper tells this story:
+Synthesis of the paper's story (not a source quotation):
 
 > *[One memorable paragraph summarizing the decision problem, main insight, method/result, and practical meaning.]*
 
@@ -110,7 +110,7 @@ These changes would [expected effect] without [unnecessary work, if applicable].
 
 ## 6. Implementation Log
 
-Include this section only after actual manuscript edits or accepted revisions.
+Include this section for actual manuscript edits. Record accepted but unapplied suggestions separately; use Done only for edits applied and checked.
 
 | # | Status | What was done |
 |---|--------|---------------|

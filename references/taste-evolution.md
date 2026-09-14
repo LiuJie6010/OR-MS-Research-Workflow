@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Update the skill from durable taste data: your revisions, co-author comments, reviewer comments, paper analyses, and writing failures encountered during real work.
+Extract durable research and writing lessons from revisions, co-author comments, reviewer comments, paper analyses, and observed failures. Update the reusable skill only when the user's request includes that work; a manuscript review alone authorizes recommendations, not persistent skill changes.
 
 ## When to Use
 
@@ -28,9 +28,9 @@ For top-paper taste distillation:
 
 1. Store compact notes, not full copyrighted paper text.
 2. Extract publication logic, introduction architecture, contribution framing, theorem-to-insight style, experiment narrative, and credibility moves.
-3. Merge repeated patterns into the relevant module only after they appear useful across papers.
+3. When skill updates are authorized, merge patterns into the relevant module only when evidence supports their usefulness across papers. Otherwise return proposed wording.
 4. Keep project-specific taste separate from general OM/OR taste.
-5. Apply `terminology-discipline.md` to terminology lessons. Record an author-approved new term as a project-specific decision by default. Promote it to general skill guidance only when independent, identifiable literature supports the usage; never generalize it merely because one manuscript adopted it.
+5. Keep author-approved terms project-specific unless independent literature supports broader usage, as described in [terminology discipline](terminology-discipline.md).
 
 ## Expected Output
 

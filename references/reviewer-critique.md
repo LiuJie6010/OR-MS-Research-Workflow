@@ -23,8 +23,8 @@ Use for full paper reviews, section reviews, mock referee reports, revision plan
 4. List minor concerns only after major concerns.
 5. Separate fixable writing issues from substantive research risks.
 6. Check whether abstract/introduction promises are supported by body results.
-7. Check definition-before-use. Flag notation, theorem labels, assumptions, or concepts used before they are defined.
-8. Apply `terminology-discipline.md`. Flag unsupported, nonstandard, conflicting, or newly invented terminology and identify the relevant manuscript definition or literature evidence. Do not silently replace the author's term; make manuscript-literature conflicts and proposed renamings explicit author decisions.
+7. Flag unexplained notation or concepts needed to understand a claim. A resolvable forward reference to a later result is not itself a definition error.
+8. Flag unsupported or conflicting terms with their evidence. Follow [terminology discipline](terminology-discipline.md) for proposed renames or provenance questions.
 9. Recommend revision priorities in order.
 
 ## Expected Output

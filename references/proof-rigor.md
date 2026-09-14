@@ -18,7 +18,7 @@ Use for theorem/proposition review, proof sketches, appendix writing, formal sta
 
 ## Procedure
 
-Apply `terminology-discipline.md` before revising definitions or proof prose. Preserve the statement's exact terms for objects, conditions, regimes, algorithms, and results. Treat a terminology change as a manuscript-level decision, not a local proof edit; flag unsupported or conflicting labels and never replace them silently.
+Preserve the statement's terms and definitions. Use [terminology discipline](terminology-discipline.md) for a substantive rename or unsupported or conflicting label.
 
 1. Verify statement precision. Check quantifiers, feasible sets, parameter ranges, and edge cases.
 2. Match proof to claim. Ensure the proof establishes the exact statement, not a nearby intuition.
@@ -27,7 +27,7 @@ Apply `terminology-discipline.md` before revising definitions or proof prose. Pr
 5. Check dependencies. Each lemma should depend only on stated assumptions or prior results.
 6. Check boundary cases. Include zero, equality, degeneracy, empty sets, symmetric cases, and limiting regimes when relevant.
 7. Compare parallel results quantitatively. If thresholds differ, explain the mechanism rather than hiding the difference.
-8. Decide formal status. Demote results that are useful but not central or not clean enough for theorem status.
+8. Recommend formal status based on what is proved and its role in the paper. A lemma, proposition, or theorem can all be rigorous; do not weaken a valid result merely because it is peripheral, or silently alter assumptions or conclusions to hide a proof gap.
 
 ## Expected Output
 

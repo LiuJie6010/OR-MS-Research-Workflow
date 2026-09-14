@@ -1,6 +1,6 @@
 # Pre-Submission Review Template
 
-Use this template for a full-paper pre-submission audit. Fill only statuses that were actually checked.
+Use this template for a full-paper pre-submission audit. Adapt sections to the manuscript; the separate preliminary-read section is optional. Retain inspected scope, located findings, verification status, and unresolved decisions. Fill only statuses that were actually checked; an accepted but unapplied suggestion is not Fixed.
 
 ```markdown
 # Pre-Submission Review Log

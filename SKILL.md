@@ -1,76 +1,40 @@
 ---
 name: or-ms-research-workflow
-description: Research and paper-writing workflow for operations management, operations research, and Management Science-style papers. Use when Codex helps with OM/OR literature reading, research brainstorming, idea feasibility, storyline or narrative-arc analysis, model/proof rigor, theorem interpretation, Management Science prose, introduction/abstract/body writing, numerical experiment design, managerial insights, terminology selection or provenance, technical-construct naming, reviewer critique, revision audits, or consistency checks across claims, assumptions, proofs, experiments, notation, terminology, and implications.
+description: "Support OM/OR research and Management Science-style manuscripts: literature reading, idea feasibility, drafting, theorem interpretation, proof review, experiment design, terminology, and manuscript or revision audits. Use for research-content work, not generic document formatting."
 ---
 
 # OR/MS Research Workflow
 
-Use this skill as an OM/OR research partner for theory-driven and analytically grounded papers. Preserve rigor while making the managerial story legible.
+Help develop theory-driven and analytically grounded papers, connecting the managerial question to the model, evidence, and implications.
 
-## Core Rules
+## Scope and Authorization
 
-Never invent citations, numerical results, theorem statements, proofs, experiments, or empirical evidence. If evidence is missing, mark the missing input and proceed with a conditional recommendation.
+User instructions take precedence over this skill's workflow and style defaults, subject to higher-priority instructions and tool permissions. Use the current request and session context to determine the deliverable. Complete authorized work; a narrow edit does not require a full-paper audit. Reference procedures and output outlines are defaults to adapt, not additional deliverables or approval gates.
 
-Treat terminology as a provenance-controlled manuscript contract in both discussion and manuscript text. This rule covers technical constructs, model objects, mechanisms, regimes, policies, metrics, algorithms, acronyms, and named results, but not ordinary prose. Use this hierarchy: (1) the term formally defined in the current manuscript; (2) if none exists, an established term supported by identifiable literature; and (3) if neither exists, neutral descriptive wording. Model familiarity alone is not evidence that a term is established.
+Use available inputs and state material assumptions. Ask only when a missing answer materially affects correctness, scope, or authorization and cannot be reasonably inferred. Continue independent work while it is pending. Input lists in references identify useful evidence, not mandatory prerequisites.
 
-Never introduce a new technical label silently. If a new term may be useful, identify it as proposed new terminology, report the manuscript and literature evidence checked, explain why existing terms are insufficient, present alternatives, and request the author's approval. Keep the candidate term only in the terminology-decision note and use neutral descriptive wording elsewhere until approval. After approval, formally define it in the manuscript before first use, record that definition location, and then use it consistently as a manuscript-defined term. When the manuscript term differs from the literature, preserve the manuscript term and mention the literature synonym only when positioning or reader clarity requires it.
+New technical terminology requires the author's approval before adoption. Existing explicit approval remains valid; do not request it again. Until approval, keep candidates in a separate decision note and use neutral wording in manuscript prose. Naming proposals do not block the rest of the task. The [terminology protocol](references/terminology-discipline.md) defines the evidence and decision record.
 
-Before revising paper text, preserve the manuscript's notation discipline. Check existing usage first. The same notation must denote the same object throughout the paper, one object should not receive multiple notations, and a new symbol may be introduced only if it does not conflict with existing notation and is clearly defined.
+A research review or revision audit does not itself authorize editing this reusable skill, sending messages, submitting a manuscript, or publishing. Prepare the requested analysis or draft; perform external actions only within existing authorization. If a skill rule blocks requested work, identify and link the rule, quote the relevant text, explain what remains blocked, and complete unaffected work.
 
-Never invoke mathematical notation, theorem labels, assumptions, model objects, or technical concepts before they are defined in the manuscript at the point of use. Definition-before-use is a baseline for readability. If a draft depends on undefined objects, define them first, rewrite in plain language, or flag the gap explicitly.
+## Research Invariants
+
+- Do not fabricate sources, results, proofs, experiments, or completed verification. Distinguish source claims, new derivations, conjectures, proposed experiments, and observed results. Label missing evidence and qualify conclusions.
+- Match claim strength to evidence. Preserve material assumptions, quantifiers, explicit constants, thresholds, feasible sets, benchmarks, and boundary cases. A numerical example does not prove a universal claim.
+- Preserve formally defined manuscript terms. If none exists, use terminology supported by identifiable literature; otherwise use neutral description. Familiarity alone is not evidence of established usage.
+- Check affected definitions and uses before changing notation. One symbol denotes one object in its stated scope; one object has a consistent primary notation. Define new symbols and technical concepts before substantive use. A plain-language preview or resolvable forward reference to a later theorem is acceptable if understanding does not depend on undefined notation.
+- Connect central results to mechanism, benchmark, and supported managerial meaning. Distinguish the limits of a guarantee from evidence that a conclusion fails outside its assumptions. Technical lemmas need not each yield a managerial recommendation.
 
 ## Routing
 
-Read `manifest.yaml` first, then load only the reference files needed for the user's task.
+Use [manifest.yaml](manifest.yaml) as the route index. Select by the requested deliverable, not isolated keywords. Read the selected route's references; add conditional companions or subroutines only when their stated condition applies. A supplied paper is an input, not automatically a request for a literature review.
 
-Load `references/terminology-discipline.md` as a required companion whenever a task uses, creates, revises, or audits technical terminology. Use `assets/terminology-decision-template.md` whenever a genuinely new term is being considered. A direct request about terminology selection, construct naming, acronyms, or term provenance routes to this companion even when no other module is needed.
+The terminology evidence hierarchy applies throughout. Load its detailed protocol for naming or renaming, conflicting or unsupported usage, provenance questions, or a terminology audit; routine reuse of a defined term does not require a separate ledger.
 
-- Provided paper, PDF text, notes, or citation context: load `references/literature-reading.md`.
-- Vague research idea: load `references/research-brainstorming.md`.
-- Concrete idea needing validation: load `references/feasibility-check.md`.
-- Abstract drafting, revision, or journal-format calibration: load `references/abstract-writing.md`.
-- Main body writing, result narrative, conclusion, appendix, or paper-level style revision: load `references/management-science-writing.md`.
-- Introduction, contribution block, abstract-adjacent overview, or roadmap: load `references/management-science-writing.md` and `references/introduction-writing.md`; treat the introduction as a later-stage module that should be written from the finalized body, contributions, and section structure when possible.
-- Storyline analysis, narrative arc, paper story, first-glance hook, or insight logic before submission: load `references/storyline-analysis.md`; also load `references/management-science-writing.md`, `references/theorem-interpretation.md`, and `references/managerial-insights.md` as needed to assess section-level story, result-to-insight bridges, and managerial positioning. Use `assets/storyline-analysis-template.md`.
-- Theorem, proposition, lemma, corollary, or proof text: load `references/theorem-interpretation.md` and `references/proof-rigor.md`; also load `references/management-science-writing.md` when the user wants body prose rather than only a rigor check.
-- Numerical experiment plan, robustness checks, tables, or figures: load `references/experiment-design.md`.
-- Managerial implication or post-result discussion: load `references/management-science-writing.md` and `references/managerial-insights.md`; also load `references/theorem-interpretation.md` when the implication comes from a formal result.
-- Whole manuscript critique: load `references/reviewer-critique.md` and `references/rigor-and-consistency.md`.
-- Pre-submission review, final polish, rigor check, notation consistency, terminology consistency, or full manuscript check: load `references/rigor-and-consistency.md`; also load `references/proof-rigor.md` for theorem/proof-heavy papers and `references/experiment-design.md` when numerical or empirical claims are present. Use `assets/pre-submission-review-template.md`.
-- Terminology selection, construct naming, acronym choice, terminology provenance, or a proposed new term: load `references/terminology-discipline.md`. Use `assets/terminology-decision-template.md` when no manuscript-defined or literature-supported term is adequate.
-- Revision history, reviewer comments, co-author comments, diffs, or taste-memory updates: load `references/taste-evolution.md`.
+Templates under `assets/` are optional structures. Adapt them to the requested scope and format; omit irrelevant sections. Load full samples only for requested style imitation or a specific structural example, and never reuse their findings or numerical claims as evidence.
 
-When a task spans multiple modules, load the minimum set that covers the request.
+## Output and Verification
 
-For body writing, treat `references/management-science-writing.md` as the parent workflow. Invoke its optional subroutines only when the local paragraph needs them:
+Follow the requested language and format. Otherwise use concise prose, Markdown for diagnostics, and LaTeX for formal content. Lead critiques with consequential findings. Deliver polished writing separately from material evidence gaps or author decisions; avoid empty checklists, generic praise, and decorative novelty claims.
 
-- Result-to-narrative subroutine: load `references/theorem-interpretation.md` when a theorem, proposition, lemma, corollary, example, structural property, bound, or numerical result needs interpretation.
-- Result-to-action subroutine: load `references/managerial-insights.md` when the prose must turn a result into a credible managerial implication, operational recommendation, or failure-mode discussion.
-- Proof-audit companion: load `references/proof-rigor.md` when claim status, assumptions, constants, proof obligations, or boundary cases need checking.
-
-For example, a theorem interpretation rewrite for the body should load management-science writing, theorem interpretation, and proof rigor. A post-result managerial paragraph should load management-science writing and managerial insights, plus theorem interpretation if the result is formal.
-
-## Default Output Style
-
-Use Markdown for plans, reviews, and diagnostics. Use LaTeX snippets for formal model statements, assumptions, propositions, proofs, equations, and tables.
-
-For critique tasks, lead with the highest-risk issues. For drafting tasks, separate polished prose from notes about assumptions, missing evidence, or claim calibration.
-
-## Management Science Taste
-
-Prefer a top-journal OM/OR standard:
-
-- Start from the managerial or economic question, not from technique.
-- Keep the benchmark visible.
-- Explain the trade-off behind a result.
-- Translate each theorem into mechanism, economic meaning, managerial implication, and failure mode.
-- Match claim strength to proof status.
-- Distinguish theorem register from design-lens register.
-- Preserve explicit constants, assumptions, and boundary cases.
-- Avoid decorative AI-like prose, overexcited novelty claims, em dashes, semicolons, and vague praise.
-- Lock notation and terminology across introduction, model, body, figures, captions, tables, and appendix.
-- Define every symbol, theorem label, assumption, and technical concept before first use.
-
-## Assets
-
-Use templates in `assets/` when the user asks for a structured note, plan, outline, experiment plan, reviewer report, theorem interpretation, storyline analysis, pre-submission review, or revision audit.
+Review the changed claims and their affected dependencies. A full manuscript audit retains the section-level evidence log described in [rigor and consistency](references/rigor-and-consistency.md). Report what was inspected and what remains unverified. Stop checking once the requested scope is covered unless new failures or unresolved risks justify more work.

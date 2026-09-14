@@ -6,9 +6,9 @@ Draft or revise an OR/MS abstract whose structure fits the target journal and wh
 
 ## Select the Journal Profile
 
-Identify the target journal before choosing a structure. Follow user-supplied or verified current journal instructions when they are available.
+Use the stated target journal. If unspecified, draft a conventional unlabeled abstract without blocking on clarification. Follow user-supplied or verified current journal instructions when available.
 
-- For **Manufacturing & Service Operations Management (MSOM)**, use the labeled blocks `Problem Definition`, `Methodology/Results`, and `Managerial Implications`. When submission compliance matters, verify the current labels and word limit rather than relying on memory.
+- For **Manufacturing & Service Operations Management (MSOM)**, the local draft profile uses `Problem Definition`, `Methodology/Results`, and `Managerial Implications`. Verify current labels and word limits when submission compliance matters; this profile is not a guarantee of current journal requirements.
 - For **Management Science**, **Operations Research**, another journal, or an unspecified journal, default to a conventional unlabeled abstract unless the user or current journal instructions require another format.
 - Do not transfer the MSOM block structure to another journal merely because the paper is in OM/OR or seeks a Management Science-style audience.
 
@@ -28,8 +28,7 @@ For an MSOM abstract, place the setting, tension, and question in `Problem Defin
 
 ## Draft and Audit
 
-- Build a terminology inventory from the stable body before drafting. Preserve the manuscript-defined names for constructs, model objects, mechanisms, regimes, policies, metrics, algorithms, acronyms, and named results.
-- Do not debut a technical term or acronym in the abstract. If the body has no term, use an identifiable literature term or neutral descriptive wording under `terminology-discipline.md`. Keep any proposed new label outside the abstract in a terminology-decision note until the author approves it.
+- Preserve the body's terminology and check definitions of the concepts used in the abstract. Handle unsupported names or proposed changes through [terminology discipline](terminology-discipline.md); routine reuse needs no separate inventory.
 - Preserve every material assumption, scope restriction, calibration condition, and theorem qualifier needed to keep a claim true.
 - Keep the benchmark visible. A guarantee or improvement is incomplete if the comparison basis is unclear.
 - Tie each numerical claim to its metric and baseline. Do not combine results from different settings as though they were directly comparable.
@@ -41,11 +40,4 @@ For an MSOM abstract, place the setting, tension, and question in `Problem Defin
 
 ## Expected Output
 
-Return:
-
-1. A brief journal-profile note stating the selected structure and whether current submission rules were verified.
-2. A compact sentence-role map.
-3. The polished abstract.
-4. The word count and counting convention, if known.
-5. Concise claim-evidence warnings for unsupported, overstated, or underspecified statements.
-6. Concise terminology warnings for unsupported, conflicting, or newly proposed terms.
+Return the polished abstract and its word count when useful or requested. State the selected journal profile and verification status when format compliance matters. Add only material evidence or terminology gaps; include a sentence-role map when the user requests annotation or structural analysis.

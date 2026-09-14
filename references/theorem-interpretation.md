@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Turn formal results into credible Management Science body prose without weakening the math or overstating the claim. This is a subroutine of `management-science-writing.md`, not a replacement for the whole body-writing workflow.
+Turn formal results into credible Management Science prose without weakening the math or overstating the claim. Use independently for a local interpretation, or with the body-writing workflow for broader prose revision.
 
 ## When to Use
 
-Use after theorem, proposition, lemma, corollary, example, or numerical result statements, especially when the user asks for interpretation, intuition, managerial meaning, or section narrative. When the user is revising a body section, load this together with `management-science-writing.md`; when proof validity or claim status is uncertain, also load `proof-rigor.md`.
+Use when a result needs interpretation, intuition, managerial meaning, or section narrative. Load [proof rigor](proof-rigor.md) when validity or claim status is uncertain; interpretation alone does not require re-proving the result.
 
 ## Inputs Needed
 
@@ -17,19 +17,19 @@ Use after theorem, proposition, lemma, corollary, example, or numerical result s
 
 ## Terminology Checkpoint
 
-Apply `terminology-discipline.md`. Reuse the formal statement's names for objects, conditions, regimes, mechanisms, benchmarks, and policies. Do not coin a nickname for a theorem, structural property, mechanism, or design principle during interpretation. If the formal result lacks an adequate term, use neutral descriptive wording and route any candidate label through the terminology-decision protocol.
+Reuse the formal statement's terminology. Use [terminology discipline](terminology-discipline.md) for unsupported labels, naming proposals, or conflicts.
 
 ## Procedure
 
-For each result, write in this order:
+Cover the relevant elements in a coherent paragraph; adapt order and detail to the result and request:
 
 1. Mathematical content. State exactly what the result proves.
 2. Mechanism. Explain why it happens using the primitives of the model.
 3. Economic meaning. Translate the result relative to the benchmark or alternative.
-4. Managerial implication. State what the manager can decide, precompute, monitor, avoid, or prioritize.
-5. Failure mode. Say what breaks when the condition fails or which complementary concern becomes important.
+4. Managerial implication. State a supported decision or action when the result has one; a technical lemma may only support a later result.
+5. Scope and failure mode. State where the guarantee applies. Describe failure outside its assumptions only with supporting analysis or evidence; lack of a guarantee does not imply failure.
 
-Use theorem register only for statements with clear primitives, feasible set, and conclusion. Use design-lens register for proxies, diagnostics, upper bounds, or informal prescriptions.
+Use formal language for proved statements with clear primitives, feasible set, and conclusion, including proved upper bounds. Label informal prescriptions or diagnostic interpretations as such rather than presenting them as guarantees.
 
 ## Expected Output
 
@@ -45,5 +45,5 @@ Return:
 - Hiding the benchmark.
 - Calling a diagnostic an optimal policy.
 - Presenting an order result as an exact equality.
-- Omitting the failure mode.
+- Claiming failure merely because a sufficient condition is not satisfied.
 - Introducing an unsupported nickname or mechanism label that does not appear in the manuscript or identifiable literature.

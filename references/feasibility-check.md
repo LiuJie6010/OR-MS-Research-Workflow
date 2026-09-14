@@ -24,7 +24,7 @@ Use when the user already has a research idea, model sketch, conjecture, prelimi
 4. Identify proof targets and likely bottlenecks.
 5. Identify experiment targets: robustness, benchmark comparison, mechanism visualization, extensions not covered by theory.
 6. Compare the idea against likely top-journal expectations.
-7. Apply `terminology-discipline.md`. Check whether each technical label is manuscript-defined, supported by identifiable literature, or only descriptive. Treat rebranding an established concept as a novelty risk, and route any genuinely new candidate term to an author decision before adopting it.
+7. Treat rebranding an established concept as a novelty risk. Use [terminology discipline](terminology-discipline.md) for naming or provenance concerns.
 8. Recommend continue, revise, narrow, or park.
 
 ## Expected Output

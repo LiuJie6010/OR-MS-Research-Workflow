@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Write post-result managerial paragraphs that are useful, credible, and tied to formal or numerical evidence. This is a subroutine of `management-science-writing.md`, not a separate paper-writing workflow.
+Write post-result managerial paragraphs tied to formal or numerical evidence. Use independently for a local paragraph or within broader body writing.
 
 ## When to Use
 
-Use after propositions, theorems, examples, numerical findings, robustness checks, and design-lens sections. When the implication is part of body-section prose, load this together with `management-science-writing.md`; when the implication comes from a formal result, also load `theorem-interpretation.md`.
+Use for implications of formal or numerical results. Load [theorem interpretation](theorem-interpretation.md) only when the supporting result needs explanation.
 
 ## Inputs Needed
 
@@ -18,16 +18,16 @@ Use after propositions, theorems, examples, numerical findings, robustness check
 
 ## Terminology Checkpoint
 
-Apply `terminology-discipline.md`. Preserve the result's manuscript-defined names for regimes, mechanisms, policies, metrics, and decision objects. Do not create a new policy name, mechanism label, or managerial acronym to make the paragraph sound memorable. When no supported term exists, use neutral operational language and place any candidate name in a separate terminology-decision note.
+Preserve the result's names for regimes, policies, and decision objects. Use [terminology discipline](terminology-discipline.md) for naming or provenance concerns.
 
 ## Procedure
 
-Use the four-part paragraph template:
+Use these four elements where supported, adapting paragraph order to the request:
 
 1. Regime. Name which setting or condition the result captures.
 2. Mechanism. Explain why the result occurs.
 3. Operational implication. Say what the manager can do and with which data or offline computation.
-4. Failure mode or trade-off. Say what happens if the hypothesis fails or which complementary priority becomes important.
+4. Scope or trade-off. Identify validity limits or a complementary priority. Describe failure outside the hypotheses only when evidence supports it.
 
 Prefer concrete operational verbs: precompute, monitor, cap, allocate, rebalance, screen, pool, reserve, prioritize, diagnose, approximate, or stress-test.
 
@@ -38,7 +38,7 @@ Return one polished paragraph plus a short evidence note identifying which theor
 ## Common Failure Modes
 
 - Writing generic "this has important implications" prose.
-- Omitting the failure mode.
+- Turning the absence of a guarantee into an unsupported prediction of failure.
 - Giving a recommendation that is not supported by the result.
 - Hiding whether the recommendation is offline design, real-time control, or diagnostic interpretation.
 - Inventing a memorable policy or mechanism name that the manuscript or literature does not support.

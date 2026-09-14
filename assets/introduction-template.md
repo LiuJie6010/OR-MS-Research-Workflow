@@ -1,6 +1,6 @@
 # Introduction Template
 
-Use this lightweight structure when drafting a Management Science-style introduction with human-readable annotations. Prefer using it after the body, formal results, numerical evidence, contribution list, and roadmap are stable enough to reveal the paper's actual promise.
+Use when an annotated introduction is requested. Adapt paragraph and contribution counts to the paper. A stable body is preferable; preliminary drafts may use this structure with evidence gaps identified separately. For clean prose, omit the annotation scaffolding.
 
 ```tex
 \section{Introduction}

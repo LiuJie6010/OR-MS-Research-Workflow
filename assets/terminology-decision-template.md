@@ -1,6 +1,6 @@
 # Terminology Decision
 
-Use only when no manuscript-defined or literature-supported term adequately names the concept.
+Use when proposing a new technical term. Adapt the note to the evidence available; do not require a new decision for an author choice already given in the session. See [the protocol](../references/terminology-discipline.md).
 
 ## Concept Being Named
 
@@ -10,7 +10,7 @@ Use only when no manuscript-defined or literature-supported term adequately name
 
 - **Term and variants found**: [Term / none]
 - **Definition location**: [Section, equation, theorem, table, figure, caption, appendix, or none]
-- **Author approval status**: [Approved / not defined / unclear]
+- **Definition or decision status**: [Manuscript-defined / explicitly approved / unclear]
 
 ## Literature Terminology Checked
 
@@ -31,9 +31,9 @@ Use only when no manuscript-defined or literature-supported term adequately name
 
 ## Decision
 
-- **Status**: Pending author decision
+- **Status**: [Pending author decision / approved / rejected / revision requested]
 - **Current wording outside this note**: [Neutral descriptive wording]
-- **Decision request**: Please approve, reject, or revise the proposed terminology.
+- **Decision request, only if pending**: Please approve, reject, or revise the proposed terminology.
 - **Author decision**: [Approve / reject / revise]
 - **Decision date or context**: [When available]
-- **Definition location after approval**: [To be added only after approval]
+- **Definition location after adoption**: [Location / approved but not yet applied]
