@@ -8,7 +8,7 @@ Extract durable research and writing lessons from revisions, co-author comments,
 
 Use for revision histories, reviewer letters, co-author comments, git diffs, Overleaf changes, paper taste notes, and natural-language requests to improve the skill.
 
-## Inputs Needed
+## Useful evidence
 
 - Comments, diffs, commit logs, paper notes, or examples.
 - Before/after text when available.

@@ -8,7 +8,7 @@ Write post-result managerial paragraphs tied to formal or numerical evidence. Us
 
 Use for implications of formal or numerical results. Load [theorem interpretation](theorem-interpretation.md) only when the supporting result needs explanation.
 
-## Inputs Needed
+## Useful evidence
 
 - Result statement or finding.
 - Regime and assumptions.

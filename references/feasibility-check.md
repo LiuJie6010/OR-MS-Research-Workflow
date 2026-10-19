@@ -8,7 +8,7 @@ Assess whether a concrete OM/OR idea can plausibly become a rigorous and publish
 
 Use when the user already has a research idea, model sketch, conjecture, preliminary result, or proposed paper angle.
 
-## Inputs Needed
+## Useful evidence
 
 - Research question.
 - Model primitives and assumptions.

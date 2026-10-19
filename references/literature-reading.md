@@ -8,7 +8,7 @@ Read provided papers or notes as an OM/OR researcher by decomposing the paper ra
 
 Use when the user provides a paper, PDF text, abstract, introduction, notes, or citation context and asks what the paper says, why it matters, why it was publishable, or what can be learned.
 
-## Inputs Needed
+## Useful evidence
 
 - Paper text, PDF extraction, abstract, introduction, or detailed notes.
 - Target lens: writing, modeling, proof, experiments, positioning, or all.

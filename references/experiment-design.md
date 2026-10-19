@@ -8,7 +8,7 @@ Design numerical experiments for OM/OR papers that support theory, illustrate me
 
 Use for simulation plans, computational experiments, numerical sections, robustness checks, figure/table planning, and experiment narrative writing.
 
-## Inputs Needed
+## Useful evidence
 
 - Main theoretical result and assumptions.
 - Benchmark policies or designs.

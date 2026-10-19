@@ -8,7 +8,7 @@ Audit consistency across the whole paper: question, abstract, introduction, mode
 
 Use for manuscript-wide checks, pre-submission audits, revision planning, or requested cross-section consistency checks. Match coverage to the request: local polish does not require the full pre-submission workflow. Missing files limit verification claims, not work on available material.
 
-## Inputs Needed
+## Useful evidence
 
 - Abstract and introduction.
 - Model and assumptions.

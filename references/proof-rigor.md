@@ -8,7 +8,7 @@ Check mathematical rigor for OM/OR theory papers, with special attention to clai
 
 Use for theorem/proposition review, proof sketches, appendix writing, formal status decisions, and reviewer-style rigor critique.
 
-## Inputs Needed
+## Useful evidence
 
 - Formal statement.
 - Definitions, assumptions, and notation.

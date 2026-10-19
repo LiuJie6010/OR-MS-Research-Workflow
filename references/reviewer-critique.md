@@ -8,7 +8,7 @@ Critique a manuscript or section as a strict OM/OR reviewer who values importanc
 
 Use for full paper reviews, section reviews, mock referee reports, revision planning, and pre-submission checks.
 
-## Inputs Needed
+## Useful evidence
 
 - Manuscript, section, outline, or summary.
 - Target journal or community.

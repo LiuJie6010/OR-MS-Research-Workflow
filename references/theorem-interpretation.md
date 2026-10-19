@@ -8,7 +8,7 @@ Turn formal results into credible Management Science prose without weakening the
 
 Use when a result needs interpretation, intuition, managerial meaning, or section narrative. Load [proof rigor](proof-rigor.md) when validity or claim status is uncertain; interpretation alone does not require re-proving the result.
 
-## Inputs Needed
+## Useful evidence
 
 - Formal statement and proof status.
 - Assumptions and benchmark.

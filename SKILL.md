@@ -9,13 +9,13 @@ Help develop theory-driven and analytically grounded papers, connecting the mana
 
 ## Scope and Authorization
 
-User instructions take precedence over this skill's workflow and style defaults, subject to higher-priority instructions and tool permissions. Use the current request and session context to determine the deliverable. Complete authorized work; a narrow edit does not require a full-paper audit. Reference procedures and output outlines are defaults to adapt, not additional deliverables or approval gates.
+User instructions take precedence over this skill's workflow and style defaults, subject to higher-priority instructions and tool permissions. Infer the deliverable from the request and the session. Treat a request to draft, check, revise, or explain as the instruction to do that work, including phrasings such as "can you", "I want to", and "help me". Produce that result. Do not stop after acknowledging the task, proposing a plan, or offering to continue, and do not replace it with a narrower product.
 
-Use available inputs and state material assumptions. Ask only when a missing answer materially affects correctness, scope, or authorization and cannot be reasonably inferred. Continue independent work while it is pending. Input lists in references identify useful evidence, not mandatory prerequisites.
+Complete authorized work before asking, so a remaining question concerns a concrete result. Ask only when a missing answer materially affects correctness, scope, or authorization and cannot be reasonably inferred. State the assumption and continue the independent work. A narrow edit does not require a full-paper audit. Reference procedures and output outlines are defaults to adapt, not additional deliverables or approval gates. Input lists in references are useful evidence, not mandatory prerequisites. Do not add unsolicited approval steps, disclaimers, or hypothetical-risk checklists. Still label missing evidence and unresolved author decisions.
 
 New technical terminology requires the author's approval before adoption. Existing explicit approval remains valid; do not request it again. Until approval, keep candidates in a separate decision note and use neutral wording in manuscript prose. Naming proposals do not block the rest of the task. The [terminology protocol](references/terminology-discipline.md) defines the evidence and decision record.
 
-A research review or revision audit does not itself authorize editing this reusable skill, sending messages, submitting a manuscript, or publishing. Prepare the requested analysis or draft; perform external actions only within existing authorization. If a skill rule blocks requested work, identify and link the rule, quote the relevant text, explain what remains blocked, and complete unaffected work.
+A research review or revision audit does not itself authorize editing this reusable skill, sending messages, submitting a manuscript, or publishing. Prepare the requested analysis or draft; perform external actions only within existing authorization. Do not delegate the requested work to subagents unless the user asks. If this skill causes a pause, an extra confirmation, unfinished requested work, or a change of direction, name and link the file that states the rule, quote the relevant text, distinguish an explicit requirement from an interpretation, explain what remains blocked, and complete unaffected work.
 
 ## Research Invariants
 
@@ -35,6 +35,6 @@ Templates under `assets/` are optional structures. Adapt them to the requested s
 
 ## Output and Verification
 
-Follow the requested language and format. Otherwise use concise prose, Markdown for diagnostics, and LaTeX for formal content. Lead critiques with consequential findings. Deliver polished writing separately from material evidence gaps or author decisions; avoid empty checklists, generic praise, and decorative novelty claims.
+Follow the requested language and format. Otherwise use concise prose, Markdown for parallel diagnostic findings, and LaTeX for formal content. State the main point first, then the support it needs. Use a list when items are parallel, sequential, or easier to compare. Lead critiques with consequential findings. Deliver polished writing separately from material evidence gaps or author decisions. Avoid empty checklists, generic praise, decorative novelty claims, stock summary labels, and a contrast the user did not request.
 
-Review the changed claims and their affected dependencies. A full manuscript audit retains the section-level evidence log described in [rigor and consistency](references/rigor-and-consistency.md). Report what was inspected and what remains unverified. Stop checking once the requested scope is covered unless new failures or unresolved risks justify more work.
+Review the changed claims and their affected dependencies. A full manuscript audit retains the section-level evidence log described in [rigor and consistency](references/rigor-and-consistency.md). Report what was inspected and what remains unverified. Once the requested checks pass, stop. Repeat or widen them only when a new change, failure, or unresolved risk justifies it.

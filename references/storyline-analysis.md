@@ -8,7 +8,7 @@ Analyze whether an OM/OR paper has a clear, intriguing, and convincing storyline
 
 Use when the user asks whether the paper is compelling, convincing, coherent as a story, or likely to interest an editor or referee. This may precede a rigor audit but is not a prerequisite for one.
 
-## Inputs Needed
+## Useful evidence
 
 - Title, abstract, introduction, and contribution list.
 - Section structure and main body text.

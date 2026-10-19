@@ -8,7 +8,7 @@ Turn vague OM/OR ideas into concrete, executable research directions without pre
 
 Use when the user has an ambiguous idea, observed phenomenon, industry setting, modeling hunch, or possible mechanism.
 
-## Inputs Needed
+## Useful evidence
 
 - Initial idea or setting.
 - Decision maker and decision variables, if known.
